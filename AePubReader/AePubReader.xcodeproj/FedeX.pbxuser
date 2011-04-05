@@ -38,16 +38,17 @@
 	28042009108E984D000629CD /* DetailViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1256, 648}}";
-			sepNavSelRange = "{460, 0}";
-			sepNavVisRange = "{0, 652}";
+			sepNavSelRange = "{749, 0}";
+			sepNavVisRange = "{0, 1197}";
 			sepNavWindowFrame = "{{115, 79}, {1315, 799}}";
 		};
 	};
 	2804200A108E984D000629CD /* DetailViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1510, 1729}}";
-			sepNavSelRange = "{870, 0}";
-			sepNavVisRange = "{1121, 1573}";
+			sepNavIntBoundsRect = "{{0, 0}, {1510, 2080}}";
+			sepNavSelRange = "{1747, 0}";
+			sepNavVisRange = "{395, 1401}";
+			sepNavWindowFrame = "{{15, 74}, {1315, 799}}";
 		};
 	};
 	28A0AAE50D9B0CCF005BE974 /* AePubReader_Prefix.pch */ = {
@@ -366,6 +367,78 @@
 			FAF45A5C134B66EF00D4C0F9 /* PBXTextBookmark */ = FAF45A5C134B66EF00D4C0F9 /* PBXTextBookmark */;
 			FAF45A5D134B66EF00D4C0F9 /* PBXTextBookmark */ = FAF45A5D134B66EF00D4C0F9 /* PBXTextBookmark */;
 			FAF45A5E134B66EF00D4C0F9 /* PBXTextBookmark */ = FAF45A5E134B66EF00D4C0F9 /* PBXTextBookmark */;
+			FAF45A7B134B79D500D4C0F9 /* PBXTextBookmark */ = FAF45A7B134B79D500D4C0F9 /* PBXTextBookmark */;
+			FAF45A7C134B79D500D4C0F9 /* PBXTextBookmark */ = FAF45A7C134B79D500D4C0F9 /* PBXTextBookmark */;
+			FAF45A7D134B79D500D4C0F9 /* PBXTextBookmark */ = FAF45A7D134B79D500D4C0F9 /* PBXTextBookmark */;
+			FAF45A7E134B79D500D4C0F9 /* PBXTextBookmark */ = FAF45A7E134B79D500D4C0F9 /* PBXTextBookmark */;
+			FAF45A7F134B79D500D4C0F9 /* PBXTextBookmark */ = FAF45A7F134B79D500D4C0F9 /* PBXTextBookmark */;
+			FAF45A96134B7BC400D4C0F9 /* PBXTextBookmark */ = FAF45A96134B7BC400D4C0F9 /* PBXTextBookmark */;
+			FAF45A97134B7BC400D4C0F9 /* PBXTextBookmark */ = FAF45A97134B7BC400D4C0F9 /* PBXTextBookmark */;
+			FAF45A98134B7BC400D4C0F9 /* PBXTextBookmark */ = FAF45A98134B7BC400D4C0F9 /* PBXTextBookmark */;
+			FAF45A9B134B7BC400D4C0F9 /* PBXTextBookmark */ = FAF45A9B134B7BC400D4C0F9 /* PBXTextBookmark */;
+			FAF45A9C134B7BC400D4C0F9 /* PBXTextBookmark */ = FAF45A9C134B7BC400D4C0F9 /* PBXTextBookmark */;
+			FAF45A9D134B7BC400D4C0F9 /* PBXTextBookmark */ = FAF45A9D134B7BC400D4C0F9 /* PBXTextBookmark */;
+			FAF45A9E134B7BC400D4C0F9 /* PBXTextBookmark */ = FAF45A9E134B7BC400D4C0F9 /* PBXTextBookmark */;
+			FAF45A9F134B7BC400D4C0F9 /* PBXTextBookmark */ = FAF45A9F134B7BC400D4C0F9 /* PBXTextBookmark */;
+			FAF45AA0134B7BC400D4C0F9 /* PBXTextBookmark */ = FAF45AA0134B7BC400D4C0F9 /* PBXTextBookmark */;
+			FAF45AB0134B7D9700D4C0F9 /* PBXTextBookmark */ = FAF45AB0134B7D9700D4C0F9 /* PBXTextBookmark */;
+			FAF45AB1134B7D9700D4C0F9 /* PBXTextBookmark */ = FAF45AB1134B7D9700D4C0F9 /* PBXTextBookmark */;
+			FAF45AB2134B7D9700D4C0F9 /* PBXTextBookmark */ = FAF45AB2134B7D9700D4C0F9 /* PBXTextBookmark */;
+			FAF45AB3134B7D9700D4C0F9 /* PBXTextBookmark */ = FAF45AB3134B7D9700D4C0F9 /* PBXTextBookmark */;
+			FAF45AB4134B7D9700D4C0F9 /* PBXTextBookmark */ = FAF45AB4134B7D9700D4C0F9 /* PBXTextBookmark */;
+			FAF45AB5134B7D9700D4C0F9 /* PBXTextBookmark */ = FAF45AB5134B7D9700D4C0F9 /* PBXTextBookmark */;
+			FAF45AB8134B7DF200D4C0F9 /* PBXTextBookmark */ = FAF45AB8134B7DF200D4C0F9 /* PBXTextBookmark */;
+			FAF45AB9134B7DF200D4C0F9 /* PBXTextBookmark */ = FAF45AB9134B7DF200D4C0F9 /* PBXTextBookmark */;
+			FAF45ABA134B7DF200D4C0F9 /* PBXTextBookmark */ = FAF45ABA134B7DF200D4C0F9 /* PBXTextBookmark */;
+			FAF45ABB134B7DF200D4C0F9 /* PBXTextBookmark */ = FAF45ABB134B7DF200D4C0F9 /* PBXTextBookmark */;
+			FAF45AC0134B7E2B00D4C0F9 /* PBXTextBookmark */ = FAF45AC0134B7E2B00D4C0F9 /* PBXTextBookmark */;
+			FAF45AC1134B7E2B00D4C0F9 /* PBXTextBookmark */ = FAF45AC1134B7E2B00D4C0F9 /* PBXTextBookmark */;
+			FAF45AC2134B7E2B00D4C0F9 /* PBXTextBookmark */ = FAF45AC2134B7E2B00D4C0F9 /* PBXTextBookmark */;
+			FAF45AC3134B7E2B00D4C0F9 /* PBXTextBookmark */ = FAF45AC3134B7E2B00D4C0F9 /* PBXTextBookmark */;
+			FAF45AC6134B7E3B00D4C0F9 /* PBXTextBookmark */ = FAF45AC6134B7E3B00D4C0F9 /* PBXTextBookmark */;
+			FAF45AC7134B7E3B00D4C0F9 /* PBXTextBookmark */ = FAF45AC7134B7E3B00D4C0F9 /* PBXTextBookmark */;
+			FAF45AC8134B7E3B00D4C0F9 /* PBXTextBookmark */ = FAF45AC8134B7E3B00D4C0F9 /* PBXTextBookmark */;
+			FAF45AC9134B7E3B00D4C0F9 /* PBXTextBookmark */ = FAF45AC9134B7E3B00D4C0F9 /* PBXTextBookmark */;
+			FAF45ACC134B7E4900D4C0F9 /* PBXTextBookmark */ = FAF45ACC134B7E4900D4C0F9 /* PBXTextBookmark */;
+			FAF45ACD134B7E4900D4C0F9 /* PBXTextBookmark */ = FAF45ACD134B7E4900D4C0F9 /* PBXTextBookmark */;
+			FAF45ACE134B7E4900D4C0F9 /* PBXTextBookmark */ = FAF45ACE134B7E4900D4C0F9 /* PBXTextBookmark */;
+			FAF45ACF134B7E4900D4C0F9 /* PBXTextBookmark */ = FAF45ACF134B7E4900D4C0F9 /* PBXTextBookmark */;
+			FAF45AD0134B7FA700D4C0F9 /* PBXTextBookmark */ = FAF45AD0134B7FA700D4C0F9 /* PBXTextBookmark */;
+			FAF45AD1134B7FA700D4C0F9 /* PBXTextBookmark */ = FAF45AD1134B7FA700D4C0F9 /* PBXTextBookmark */;
+			FAF45AD2134B7FA700D4C0F9 /* XCBuildMessageTextBookmark */ = FAF45AD2134B7FA700D4C0F9 /* XCBuildMessageTextBookmark */;
+			FAF45AD3134B7FA700D4C0F9 /* PBXTextBookmark */ = FAF45AD3134B7FA700D4C0F9 /* PBXTextBookmark */;
+			FAF45AD4134B7FB000D4C0F9 /* PBXTextBookmark */ = FAF45AD4134B7FB000D4C0F9 /* PBXTextBookmark */;
+			FAF45AD5134B7FB200D4C0F9 /* PBXTextBookmark */ = FAF45AD5134B7FB200D4C0F9 /* PBXTextBookmark */;
+			FAF45AD9134B813600D4C0F9 /* PBXTextBookmark */ = FAF45AD9134B813600D4C0F9 /* PBXTextBookmark */;
+			FAF45ADA134B817E00D4C0F9 /* PBXTextBookmark */ = FAF45ADA134B817E00D4C0F9 /* PBXTextBookmark */;
+			FAF45ADB134B817E00D4C0F9 /* PBXTextBookmark */ = FAF45ADB134B817E00D4C0F9 /* PBXTextBookmark */;
+			FAF45ADC134B817E00D4C0F9 /* PBXTextBookmark */ = FAF45ADC134B817E00D4C0F9 /* PBXTextBookmark */;
+			FAF45ADD134B818300D4C0F9 /* PBXTextBookmark */ = FAF45ADD134B818300D4C0F9 /* PBXTextBookmark */;
+			FAF45AE7134B83BB00D4C0F9 /* XCBuildMessageTextBookmark */ = FAF45AE7134B83BB00D4C0F9 /* XCBuildMessageTextBookmark */;
+			FAF45AEA134B83CB00D4C0F9 /* PBXTextBookmark */ = FAF45AEA134B83CB00D4C0F9 /* PBXTextBookmark */;
+			FAF45AEB134B83CB00D4C0F9 /* XCBuildMessageTextBookmark */ = FAF45AEB134B83CB00D4C0F9 /* XCBuildMessageTextBookmark */;
+			FAF45AEC134B83CB00D4C0F9 /* PBXTextBookmark */ = FAF45AEC134B83CB00D4C0F9 /* PBXTextBookmark */;
+			FAF45AEF134B83CB00D4C0F9 /* PBXTextBookmark */ = FAF45AEF134B83CB00D4C0F9 /* PBXTextBookmark */;
+			FAF45AF2134B83CB00D4C0F9 /* PBXTextBookmark */ = FAF45AF2134B83CB00D4C0F9 /* PBXTextBookmark */;
+			FAF45AF3134B83CB00D4C0F9 /* PBXTextBookmark */ = FAF45AF3134B83CB00D4C0F9 /* PBXTextBookmark */;
+			FAF45AF4134B83CB00D4C0F9 /* PBXTextBookmark */ = FAF45AF4134B83CB00D4C0F9 /* PBXTextBookmark */;
+			FAF45AF7134B87A500D4C0F9 /* PBXTextBookmark */ = FAF45AF7134B87A500D4C0F9 /* PBXTextBookmark */;
+			FAF45AF8134B87A500D4C0F9 /* PBXTextBookmark */ = FAF45AF8134B87A500D4C0F9 /* PBXTextBookmark */;
+			FAF45AF9134B87A500D4C0F9 /* PBXTextBookmark */ = FAF45AF9134B87A500D4C0F9 /* PBXTextBookmark */;
+			FAF45AFC134B87D200D4C0F9 /* PBXTextBookmark */ = FAF45AFC134B87D200D4C0F9 /* PBXTextBookmark */;
+			FAF45AFD134B87D200D4C0F9 /* PBXTextBookmark */ = FAF45AFD134B87D200D4C0F9 /* PBXTextBookmark */;
+			FAF45AFE134B87D200D4C0F9 /* PBXTextBookmark */ = FAF45AFE134B87D200D4C0F9 /* PBXTextBookmark */;
+			FAF45B01134B87E100D4C0F9 /* PBXTextBookmark */ = FAF45B01134B87E100D4C0F9 /* PBXTextBookmark */;
+			FAF45B02134B87E100D4C0F9 /* PBXTextBookmark */ = FAF45B02134B87E100D4C0F9 /* PBXTextBookmark */;
+			FAF45B03134B87E100D4C0F9 /* PBXTextBookmark */ = FAF45B03134B87E100D4C0F9 /* PBXTextBookmark */;
+			FAF45B11134B8CD500D4C0F9 /* XCBuildMessageTextBookmark */ = FAF45B11134B8CD500D4C0F9 /* XCBuildMessageTextBookmark */;
+			FAF45B12134B8CD500D4C0F9 /* PBXTextBookmark */ = FAF45B12134B8CD500D4C0F9 /* PBXTextBookmark */;
+			FAF45B15134B8CE300D4C0F9 /* PBXTextBookmark */ = FAF45B15134B8CE300D4C0F9 /* PBXTextBookmark */;
+			FAF45B16134B8CE300D4C0F9 /* PBXTextBookmark */ = FAF45B16134B8CE300D4C0F9 /* PBXTextBookmark */;
+			FAF45B17134B8CE300D4C0F9 /* PBXTextBookmark */ = FAF45B17134B8CE300D4C0F9 /* PBXTextBookmark */;
+			FAF45B1F134B8D2D00D4C0F9 /* PBXTextBookmark */ = FAF45B1F134B8D2D00D4C0F9 /* PBXTextBookmark */;
+			FAF45B20134B8D2D00D4C0F9 /* PBXTextBookmark */ = FAF45B20134B8D2D00D4C0F9 /* PBXTextBookmark */;
+			FAF45B21134B8D2D00D4C0F9 /* PBXTextBookmark */ = FAF45B21134B8D2D00D4C0F9 /* PBXTextBookmark */;
 			FAFA8E87134A0624000291E2 = FAFA8E87134A0624000291E2 /* PlistBookmark */;
 			FAFA8E88134A0624000291E2 = FAFA8E88134A0624000291E2 /* PBXTextBookmark */;
 			FAFA8E8B134A0624000291E2 = FAFA8E8B134A0624000291E2 /* PBXTextBookmark */;
@@ -405,7 +478,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 46";
 		rLen = 0;
-		rLoc = 1118;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 1566;
 		vrLoc = 633;
@@ -509,7 +582,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 93";
 		rLen = 0;
-		rLoc = 1120;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 523;
 		vrLoc = 357;
@@ -519,7 +592,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 97";
 		rLen = 0;
-		rLoc = 1120;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 1670;
 		vrLoc = 1198;
@@ -529,7 +602,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 93";
 		rLen = 0;
-		rLoc = 1120;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 499;
 		vrLoc = 357;
@@ -539,7 +612,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 95";
 		rLen = 0;
-		rLoc = 1120;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 1668;
 		vrLoc = 1198;
@@ -549,7 +622,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 93";
 		rLen = 0;
-		rLoc = 1120;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 499;
 		vrLoc = 357;
@@ -559,7 +632,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 94";
 		rLen = 0;
-		rLoc = 1120;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 1667;
 		vrLoc = 1198;
@@ -567,16 +640,17 @@
 	FAF45877134B1B6C00D4C0F9 /* EPub.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1256, 671}}";
-			sepNavSelRange = "{514, 0}";
-			sepNavVisRange = "{0, 520}";
+			sepNavSelRange = "{529, 10}";
+			sepNavVisRange = "{0, 778}";
 			sepNavWindowFrame = "{{114, 79}, {1315, 799}}";
 		};
 	};
 	FAF45878134B1B6C00D4C0F9 /* EPub.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1272, 1508}}";
-			sepNavSelRange = "{4228, 0}";
-			sepNavVisRange = "{0, 1125}";
+			sepNavIntBoundsRect = "{{0, 0}, {1256, 1872}}";
+			sepNavSelRange = "{241, 0}";
+			sepNavVisRange = "{0, 1147}";
+			sepNavWindowFrame = "{{19, 74}, {1315, 799}}";
 		};
 	};
 	FAF4587A134B1C8A00D4C0F9 /* EPub.h */ = {
@@ -601,7 +675,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 93";
 		rLen = 0;
-		rLoc = 1120;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 523;
 		vrLoc = 357;
@@ -611,7 +685,7 @@
 		fRef = FAF4587A134B1C8A00D4C0F9 /* EPub.h */;
 		name = "EPub.h: 16";
 		rLen = 0;
-		rLoc = 599;
+		rLoc = 820;
 		rType = 0;
 		vrLen = 275;
 		vrLoc = 0;
@@ -621,7 +695,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 16";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 239;
 		vrLoc = 0;
@@ -631,7 +705,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 19";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 370;
 		vrLoc = 0;
@@ -651,7 +725,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 77";
 		rLen = 0;
-		rLoc = 1120;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 1562;
 		vrLoc = 1355;
@@ -661,7 +735,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -671,7 +745,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1109;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 2620;
@@ -681,7 +755,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -691,7 +765,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 26";
 		rLen = 0;
-		rLoc = 551;
+		rLoc = 772;
 		rType = 0;
 		vrLen = 554;
 		vrLoc = 0;
@@ -701,7 +775,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 76";
 		rLen = 0;
-		rLoc = 2642;
+		rLoc = 2699;
 		rType = 0;
 		vrLen = 1574;
 		vrLoc = 608;
@@ -711,7 +785,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 26";
 		rLen = 0;
-		rLoc = 512;
+		rLoc = 316;
 		rType = 0;
 		vrLen = 1206;
 		vrLoc = 0;
@@ -721,7 +795,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -731,7 +805,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1666;
 		vrLoc = 767;
@@ -741,7 +815,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -751,7 +825,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -761,7 +835,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1667;
 		vrLoc = 767;
@@ -771,7 +845,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -781,7 +855,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -791,7 +865,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1656;
 		vrLoc = 767;
@@ -801,7 +875,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -811,7 +885,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -821,7 +895,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 80";
 		rLen = 0;
-		rLoc = 2521;
+		rLoc = 2578;
 		rType = 0;
 		vrLen = 1663;
 		vrLoc = 767;
@@ -831,7 +905,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -841,7 +915,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -851,7 +925,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 80";
 		rLen = 0;
-		rLoc = 2521;
+		rLoc = 2578;
 		rType = 0;
 		vrLen = 1649;
 		vrLoc = 767;
@@ -861,7 +935,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -871,7 +945,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -881,7 +955,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1650;
 		vrLoc = 767;
@@ -891,7 +965,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -901,7 +975,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -911,7 +985,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1649;
 		vrLoc = 767;
@@ -921,7 +995,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -931,7 +1005,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -941,7 +1015,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1650;
 		vrLoc = 767;
@@ -951,7 +1025,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -961,7 +1035,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -971,7 +1045,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1638;
 		vrLoc = 767;
@@ -981,7 +1055,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -991,7 +1065,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1001,7 +1075,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1647;
 		vrLoc = 767;
@@ -1011,7 +1085,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1021,7 +1095,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1031,7 +1105,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1647;
 		vrLoc = 767;
@@ -1041,7 +1115,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1051,7 +1125,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1061,7 +1135,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1656;
 		vrLoc = 767;
@@ -1071,7 +1145,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1081,7 +1155,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1091,7 +1165,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1648;
 		vrLoc = 767;
@@ -1101,7 +1175,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1111,7 +1185,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1121,7 +1195,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1649;
 		vrLoc = 767;
@@ -1131,7 +1205,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1141,7 +1215,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1151,7 +1225,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2380;
+		rLoc = 2437;
 		rType = 0;
 		vrLen = 1658;
 		vrLoc = 767;
@@ -1161,7 +1235,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1171,7 +1245,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1181,7 +1255,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2379;
+		rLoc = 2436;
 		rType = 0;
 		vrLen = 1652;
 		vrLoc = 767;
@@ -1191,7 +1265,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1201,7 +1275,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1211,7 +1285,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 80";
 		rLen = 0;
-		rLoc = 2521;
+		rLoc = 2578;
 		rType = 0;
 		vrLen = 1667;
 		vrLoc = 767;
@@ -1221,7 +1295,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1231,7 +1305,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1241,7 +1315,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 80";
 		rLen = 0;
-		rLoc = 2521;
+		rLoc = 2578;
 		rType = 0;
 		vrLen = 1654;
 		vrLoc = 767;
@@ -1251,7 +1325,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1261,7 +1335,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1271,7 +1345,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 26";
 		rLen = 0;
-		rLoc = 551;
+		rLoc = 772;
 		rType = 0;
 		vrLen = 554;
 		vrLoc = 0;
@@ -1281,7 +1355,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 81";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2635;
 		rType = 0;
 		vrLen = 1206;
 		vrLoc = 0;
@@ -1291,7 +1365,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 81";
 		rLen = 0;
-		rLoc = 2506;
+		rLoc = 2563;
 		rType = 0;
 		vrLen = 1989;
 		vrLoc = 826;
@@ -1301,7 +1375,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1311,7 +1385,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1321,7 +1395,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 81";
 		rLen = 0;
-		rLoc = 2506;
+		rLoc = 2563;
 		rType = 0;
 		vrLen = 1987;
 		vrLoc = 826;
@@ -1331,7 +1405,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1341,7 +1415,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1351,7 +1425,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 81";
 		rLen = 0;
-		rLoc = 2506;
+		rLoc = 2563;
 		rType = 0;
 		vrLen = 1987;
 		vrLoc = 826;
@@ -1361,7 +1435,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 25";
 		rLen = 0;
-		rLoc = 492;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 559;
 		vrLoc = 0;
@@ -1371,7 +1445,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1381,7 +1455,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 22";
 		rLen = 0;
-		rLoc = 383;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -1391,7 +1465,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 25";
 		rLen = 0;
-		rLoc = 492;
+		rLoc = 713;
 		rType = 0;
 		vrLen = 559;
 		vrLoc = 0;
@@ -1401,7 +1475,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 84";
 		rLen = 0;
-		rLoc = 2700;
+		rLoc = 2757;
 		rType = 0;
 		vrLen = 1876;
 		vrLoc = 767;
@@ -1411,7 +1485,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1422,7 +1496,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 26;
+		rLoc = 36;
 		rType = 1;
 	};
 	FAF4593A134B4BF400D4C0F9 /* PBXTextBookmark */ = {
@@ -1430,7 +1504,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 27";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 773;
 		rType = 0;
 		vrLen = 426;
 		vrLoc = 142;
@@ -1440,7 +1514,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 18";
 		rLen = 0;
-		rLoc = 319;
+		rLoc = 395;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -1450,7 +1524,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 79";
 		rLen = 0;
-		rLoc = 2191;
+		rLoc = 2248;
 		rType = 0;
 		vrLen = 1200;
 		vrLoc = 0;
@@ -1460,7 +1534,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 3105;
+		rLoc = 3162;
 		rType = 0;
 		vrLen = 1914;
 		vrLoc = 1079;
@@ -1470,7 +1544,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1481,7 +1555,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 26;
+		rLoc = 36;
 		rType = 1;
 	};
 	FAF45940134B4BFA00D4C0F9 /* PBXTextBookmark */ = {
@@ -1489,7 +1563,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 25";
 		rLen = 0;
-		rLoc = 550;
+		rLoc = 771;
 		rType = 0;
 		vrLen = 422;
 		vrLoc = 146;
@@ -1499,7 +1573,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 27";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 773;
 		rType = 0;
 		vrLen = 426;
 		vrLoc = 142;
@@ -1509,7 +1583,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 3105;
+		rLoc = 3162;
 		rType = 0;
 		vrLen = 1914;
 		vrLoc = 1079;
@@ -1519,7 +1593,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1529,7 +1603,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 27";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 773;
 		rType = 0;
 		vrLen = 426;
 		vrLoc = 142;
@@ -1539,7 +1613,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 26";
 		rLen = 0;
-		rLoc = 509;
+		rLoc = 316;
 		rType = 0;
 		vrLen = 1334;
 		vrLoc = 192;
@@ -1549,7 +1623,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1559,7 +1633,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 27";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 773;
 		rType = 0;
 		vrLen = 426;
 		vrLoc = 142;
@@ -1569,7 +1643,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 3221;
+		rLoc = 3278;
 		rType = 0;
 		vrLen = 1929;
 		vrLoc = 1106;
@@ -1579,7 +1653,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1589,7 +1663,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 27";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 773;
 		rType = 0;
 		vrLen = 426;
 		vrLoc = 142;
@@ -1599,7 +1673,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 93";
 		rLen = 0;
-		rLoc = 2882;
+		rLoc = 2939;
 		rType = 0;
 		vrLen = 1941;
 		vrLoc = 1106;
@@ -1609,7 +1683,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1619,7 +1693,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 27";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 773;
 		rType = 0;
 		vrLen = 426;
 		vrLoc = 142;
@@ -1649,7 +1723,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1659,7 +1733,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 93";
 		rLen = 0;
-		rLoc = 2882;
+		rLoc = 2939;
 		rType = 0;
 		vrLen = 1227;
 		vrLoc = 0;
@@ -1669,7 +1743,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1679,7 +1753,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1689,7 +1763,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1929;
 		vrLoc = 1122;
@@ -1699,7 +1773,7 @@
 		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
 		name = "DetailViewController.h: 19";
 		rLen = 0;
-		rLoc = 460;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 652;
 		vrLoc = 0;
@@ -1709,7 +1783,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1719,7 +1793,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1924;
 		vrLoc = 1122;
@@ -1729,7 +1803,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1739,7 +1813,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1931;
 		vrLoc = 1122;
@@ -1749,7 +1823,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1759,7 +1833,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1932;
 		vrLoc = 1122;
@@ -1769,7 +1843,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1779,7 +1853,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1930;
 		vrLoc = 1122;
@@ -1789,7 +1863,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1799,7 +1873,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1932;
 		vrLoc = 1122;
@@ -1809,7 +1883,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1819,7 +1893,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1930;
 		vrLoc = 1122;
@@ -1829,7 +1903,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1839,7 +1913,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1931;
 		vrLoc = 1122;
@@ -1849,7 +1923,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1859,7 +1933,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1933;
 		vrLoc = 1122;
@@ -1869,7 +1943,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1879,7 +1953,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1932;
 		vrLoc = 1122;
@@ -1889,7 +1963,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1899,7 +1973,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1933;
 		vrLoc = 1122;
@@ -1909,7 +1983,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1919,7 +1993,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1929;
 		vrLoc = 1122;
@@ -1929,7 +2003,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1939,7 +2013,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1924;
 		vrLoc = 1122;
@@ -1949,7 +2023,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1959,7 +2033,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 94";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1931;
 		vrLoc = 1122;
@@ -1969,7 +2043,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 786;
 		vrLoc = 877;
@@ -1979,7 +2053,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 95";
 		rLen = 0;
-		rLoc = 3102;
+		rLoc = 3159;
 		rType = 0;
 		vrLen = 1980;
 		vrLoc = 1122;
@@ -1989,7 +2063,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -1999,7 +2073,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 95";
 		rLen = 0;
-		rLoc = 3105;
+		rLoc = 3162;
 		rType = 0;
 		vrLen = 1976;
 		vrLoc = 1122;
@@ -2009,7 +2083,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2019,7 +2093,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 95";
 		rLen = 0;
-		rLoc = 3077;
+		rLoc = 3134;
 		rType = 0;
 		vrLen = 1985;
 		vrLoc = 1122;
@@ -2029,7 +2103,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2039,7 +2113,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 91";
 		rLen = 0;
-		rLoc = 2880;
+		rLoc = 2937;
 		rType = 0;
 		vrLen = 2000;
 		vrLoc = 1122;
@@ -2049,7 +2123,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2059,7 +2133,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2882;
+		rLoc = 2939;
 		rType = 0;
 		vrLen = 1984;
 		vrLoc = 1106;
@@ -2069,7 +2143,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2079,7 +2153,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1985;
 		vrLoc = 1106;
@@ -2089,7 +2163,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2099,7 +2173,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1985;
 		vrLoc = 1106;
@@ -2109,7 +2183,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2119,7 +2193,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1985;
 		vrLoc = 1106;
@@ -2129,7 +2203,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2139,7 +2213,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1991;
 		vrLoc = 1106;
@@ -2149,7 +2223,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2159,7 +2233,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1999;
 		vrLoc = 1106;
@@ -2169,7 +2243,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2179,7 +2253,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 2000;
 		vrLoc = 1106;
@@ -2189,7 +2263,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2199,7 +2273,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1987;
 		vrLoc = 1106;
@@ -2209,7 +2283,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2219,7 +2293,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1982;
 		vrLoc = 1106;
@@ -2229,7 +2303,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2239,7 +2313,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1983;
 		vrLoc = 1106;
@@ -2249,7 +2323,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2259,7 +2333,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1979;
 		vrLoc = 1106;
@@ -2269,7 +2343,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2279,7 +2353,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1980;
 		vrLoc = 1106;
@@ -2289,7 +2363,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2299,7 +2373,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2914;
+		rLoc = 2971;
 		rType = 0;
 		vrLen = 1981;
 		vrLoc = 1106;
@@ -2309,7 +2383,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2319,7 +2393,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2890;
+		rLoc = 2947;
 		rType = 0;
 		vrLen = 1988;
 		vrLoc = 1106;
@@ -2329,7 +2403,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2339,7 +2413,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2930;
+		rLoc = 2987;
 		rType = 0;
 		vrLen = 2088;
 		vrLoc = 1106;
@@ -2349,7 +2423,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2359,7 +2433,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 92";
 		rLen = 0;
-		rLoc = 2936;
+		rLoc = 2993;
 		rType = 0;
 		vrLen = 2088;
 		vrLoc = 1106;
@@ -2369,7 +2443,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 786;
 		vrLoc = 877;
@@ -2379,7 +2453,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 95";
 		rLen = 0;
-		rLoc = 3429;
+		rLoc = 3486;
 		rType = 0;
 		vrLen = 2116;
 		vrLoc = 1106;
@@ -2389,7 +2463,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2399,7 +2473,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 95";
 		rLen = 0;
-		rLoc = 3478;
+		rLoc = 3535;
 		rType = 0;
 		vrLen = 2117;
 		vrLoc = 1106;
@@ -2409,7 +2483,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2419,7 +2493,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 95";
 		rLen = 0;
-		rLoc = 3476;
+		rLoc = 3533;
 		rType = 0;
 		vrLen = 2131;
 		vrLoc = 1106;
@@ -2429,7 +2503,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2439,7 +2513,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPubParser.h: 16";
 		rLen = 0;
-		rLoc = 296;
+		rLoc = 343;
 		rType = 0;
 		vrLen = 582;
 		vrLoc = 0;
@@ -2449,7 +2523,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 95";
 		rLen = 0;
-		rLoc = 3357;
+		rLoc = 3414;
 		rType = 0;
 		vrLen = 2134;
 		vrLoc = 1106;
@@ -2459,7 +2533,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 98";
 		rLen = 0;
-		rLoc = 3426;
+		rLoc = 3483;
 		rType = 0;
 		vrLen = 2287;
 		vrLoc = 1223;
@@ -2469,7 +2543,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2479,7 +2553,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 104";
 		rLen = 0;
-		rLoc = 4228;
+		rLoc = 4342;
 		rType = 0;
 		vrLen = 2464;
 		vrLoc = 1536;
@@ -2498,7 +2572,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1117;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 877;
@@ -2508,7 +2582,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPub.h: 27";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 773;
 		rType = 0;
 		vrLen = 494;
 		vrLoc = 83;
@@ -2518,7 +2592,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPubParser.m: 15";
 		rLen = 0;
-		rLoc = 268;
+		rLoc = 309;
 		rType = 0;
 		vrLen = 461;
 		vrLoc = 0;
@@ -2538,7 +2612,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 45";
 		rLen = 0;
-		rLoc = 1020;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 1483;
 		vrLoc = 156;
@@ -2548,7 +2622,7 @@
 		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
 		name = "EPub.h: 24";
 		rLen = 0;
-		rLoc = 550;
+		rLoc = 771;
 		rType = 0;
 		vrLen = 412;
 		vrLoc = 146;
@@ -2568,7 +2642,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPub.m: 95";
 		rLen = 0;
-		rLoc = 3106;
+		rLoc = 3163;
 		rType = 0;
 		vrLen = 1275;
 		vrLoc = 2707;
@@ -2611,7 +2685,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPub.m: 103";
 		rLen = 0;
-		rLoc = 3637;
+		rLoc = 3694;
 		rType = 0;
 		vrLen = 2615;
 		vrLoc = 1512;
@@ -2621,7 +2695,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 38";
 		rLen = 0;
-		rLoc = 870;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 1573;
 		vrLoc = 1121;
@@ -2642,7 +2716,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 102;
+		rLoc = 105;
 		rType = 1;
 	};
 	FAF45A46134B661200D4C0F9 /* PBXTextBookmark */ = {
@@ -2661,7 +2735,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 108;
+		rLoc = 112;
 		rType = 1;
 	};
 	FAF45A48134B661200D4C0F9 /* PBXTextBookmark */ = {
@@ -2669,7 +2743,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPub.m: 109";
 		rLen = 0;
-		rLoc = 4080;
+		rLoc = 4194;
 		rType = 0;
 		vrLen = 730;
 		vrLoc = 3482;
@@ -2680,7 +2754,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 102;
+		rLoc = 105;
 		rType = 1;
 	};
 	FAF45A4E134B662500D4C0F9 /* PBXTextBookmark */ = {
@@ -2688,7 +2762,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPub.m: 103";
 		rLen = 0;
-		rLoc = 3636;
+		rLoc = 3693;
 		rType = 0;
 		vrLen = 1107;
 		vrLoc = 3106;
@@ -2698,7 +2772,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPub.m: 110";
 		rLen = 0;
-		rLoc = 4228;
+		rLoc = 4342;
 		rType = 0;
 		vrLen = 2652;
 		vrLoc = 1561;
@@ -2708,7 +2782,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 38";
 		rLen = 0;
-		rLoc = 870;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 1573;
 		vrLoc = 1121;
@@ -2718,7 +2792,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPub.m: 103";
 		rLen = 0;
-		rLoc = 3636;
+		rLoc = 3693;
 		rType = 0;
 		vrLen = 1107;
 		vrLoc = 3106;
@@ -2728,7 +2802,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPub.m: 109";
 		rLen = 0;
-		rLoc = 4080;
+		rLoc = 4194;
 		rType = 0;
 		vrLen = 2652;
 		vrLoc = 1561;
@@ -2738,7 +2812,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 38";
 		rLen = 0;
-		rLoc = 870;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 1573;
 		vrLoc = 1121;
@@ -2748,7 +2822,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPub.m: 103";
 		rLen = 0;
-		rLoc = 3636;
+		rLoc = 3693;
 		rType = 0;
 		vrLen = 1137;
 		vrLoc = 3106;
@@ -2758,7 +2832,7 @@
 		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
 		name = "EPub.m: 110";
 		rLen = 0;
-		rLoc = 4228;
+		rLoc = 4342;
 		rType = 0;
 		vrLen = 2682;
 		vrLoc = 1561;
@@ -2768,10 +2842,723 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 38";
 		rLen = 0;
-		rLoc = 870;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 1573;
 		vrLoc = 1121;
+	};
+	FAF45A7B134B79D500D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
+		name = "EPub.m: 106";
+		rLen = 0;
+		rLoc = 3693;
+		rType = 0;
+		vrLen = 620;
+		vrLoc = 1045;
+	};
+	FAF45A7C134B79D500D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
+		name = "EPub.h: 26";
+		rLen = 0;
+		rLoc = 472;
+		rType = 0;
+		vrLen = 724;
+		vrLoc = 0;
+	};
+	FAF45A7D134B79D500D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
+		name = "EPub.m: 13";
+		rLen = 0;
+		rLoc = 202;
+		rType = 0;
+		vrLen = 1214;
+		vrLoc = 0;
+	};
+	FAF45A7E134B79D500D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
+		name = "EPub.m: 13";
+		rLen = 0;
+		rLoc = 180;
+		rType = 0;
+		vrLen = 1149;
+		vrLoc = 0;
+	};
+	FAF45A7F134B79D500D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 47";
+		rLen = 0;
+		rLoc = 394;
+		rType = 0;
+		vrLen = 1731;
+		vrLoc = 373;
+	};
+	FAF45A96134B7BC400D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
+		name = "EPub.m: 122";
+		rLen = 0;
+		rLoc = 4407;
+		rType = 0;
+		vrLen = 749;
+		vrLoc = 1460;
+	};
+	FAF45A97134B7BC400D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 616;
+		vrLoc = 30;
+	};
+	FAF45A98134B7BC400D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 33";
+		rLen = 0;
+		rLoc = 1112;
+		rType = 0;
+		vrLen = 509;
+		vrLoc = 46;
+	};
+	FAF45A9B134B7BC400D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 22";
+		rLen = 0;
+		rLoc = 394;
+		rType = 0;
+		vrLen = 1185;
+		vrLoc = 0;
+	};
+	FAF45A9C134B7BC400D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 29";
+		rLen = 0;
+		rLoc = 957;
+		rType = 0;
+		vrLen = 793;
+		vrLoc = 0;
+	};
+	FAF45A9D134B7BC400D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 29";
+		rLen = 0;
+		rLoc = 948;
+		rType = 0;
+		vrLen = 795;
+		vrLoc = 0;
+	};
+	FAF45A9E134B7BC400D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
+		name = "EPub.m: 16";
+		rLen = 0;
+		rLoc = 242;
+		rType = 0;
+		vrLen = 1131;
+		vrLoc = 0;
+	};
+	FAF45A9F134B7BC400D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
+		name = "EPub.h: 20";
+		rLen = 0;
+		rLoc = 344;
+		rType = 0;
+		vrLen = 728;
+		vrLoc = 0;
+	};
+	FAF45AA0134B7BC400D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 145";
+		rLen = 0;
+		rLoc = 4047;
+		rType = 0;
+		vrLen = 1724;
+		vrLoc = 412;
+	};
+	FAF45AB0134B7D9700D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 33";
+		rLen = 0;
+		rLoc = 1112;
+		rType = 0;
+		vrLen = 509;
+		vrLoc = 46;
+	};
+	FAF45AB1134B7D9700D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 29";
+		rLen = 0;
+		rLoc = 948;
+		rType = 0;
+		vrLen = 795;
+		vrLoc = 0;
+	};
+	FAF45AB2134B7D9700D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 48";
+		rLen = 0;
+		rLoc = 1230;
+		rType = 0;
+		vrLen = 1370;
+		vrLoc = 152;
+	};
+	FAF45AB3134B7D9700D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
+		name = "EPub.h: 27";
+		rLen = 10;
+		rLoc = 529;
+		rType = 0;
+		vrLen = 778;
+		vrLoc = 0;
+	};
+	FAF45AB4134B7D9700D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
+		name = "EPub.m: 15";
+		rLen = 0;
+		rLoc = 241;
+		rType = 0;
+		vrLen = 1147;
+		vrLoc = 0;
+	};
+	FAF45AB5134B7D9700D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 147";
+		rLen = 0;
+		rLoc = 4047;
+		rType = 0;
+		vrLen = 1785;
+		vrLoc = 412;
+	};
+	FAF45AB8134B7DF200D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 33";
+		rLen = 0;
+		rLoc = 1112;
+		rType = 0;
+		vrLen = 509;
+		vrLoc = 46;
+	};
+	FAF45AB9134B7DF200D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 50";
+		rLen = 0;
+		rLoc = 1230;
+		rType = 0;
+		vrLen = 1189;
+		vrLoc = 152;
+	};
+	FAF45ABA134B7DF200D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
+		name = "EPub.m: 15";
+		rLen = 0;
+		rLoc = 241;
+		rType = 0;
+		vrLen = 1147;
+		vrLoc = 0;
+	};
+	FAF45ABB134B7DF200D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 149";
+		rLen = 0;
+		rLoc = 4047;
+		rType = 0;
+		vrLen = 1746;
+		vrLoc = 412;
+	};
+	FAF45AC0134B7E2B00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 33";
+		rLen = 0;
+		rLoc = 1112;
+		rType = 0;
+		vrLen = 509;
+		vrLoc = 46;
+	};
+	FAF45AC1134B7E2B00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 50";
+		rLen = 0;
+		rLoc = 1230;
+		rType = 0;
+		vrLen = 1219;
+		vrLoc = 152;
+	};
+	FAF45AC2134B7E2B00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
+		name = "EPub.m: 15";
+		rLen = 0;
+		rLoc = 241;
+		rType = 0;
+		vrLen = 1147;
+		vrLoc = 0;
+	};
+	FAF45AC3134B7E2B00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 149";
+		rLen = 0;
+		rLoc = 4047;
+		rType = 0;
+		vrLen = 1776;
+		vrLoc = 412;
+	};
+	FAF45AC6134B7E3B00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 33";
+		rLen = 0;
+		rLoc = 1112;
+		rType = 0;
+		vrLen = 509;
+		vrLoc = 46;
+	};
+	FAF45AC7134B7E3B00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 48";
+		rLen = 0;
+		rLoc = 1166;
+		rType = 0;
+		vrLen = 1219;
+		vrLoc = 152;
+	};
+	FAF45AC8134B7E3B00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
+		name = "EPub.m: 15";
+		rLen = 0;
+		rLoc = 241;
+		rType = 0;
+		vrLen = 1147;
+		vrLoc = 0;
+	};
+	FAF45AC9134B7E3B00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 149";
+		rLen = 0;
+		rLoc = 4047;
+		rType = 0;
+		vrLen = 1776;
+		vrLoc = 412;
+	};
+	FAF45ACC134B7E4900D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 33";
+		rLen = 0;
+		rLoc = 1112;
+		rType = 0;
+		vrLen = 509;
+		vrLoc = 46;
+	};
+	FAF45ACD134B7E4900D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 48";
+		rLen = 0;
+		rLoc = 1166;
+		rType = 0;
+		vrLen = 1219;
+		vrLoc = 152;
+	};
+	FAF45ACE134B7E4900D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
+		name = "EPub.m: 15";
+		rLen = 0;
+		rLoc = 241;
+		rType = 0;
+		vrLen = 1147;
+		vrLoc = 0;
+	};
+	FAF45ACF134B7E4900D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 149";
+		rLen = 0;
+		rLoc = 4047;
+		rType = 0;
+		vrLen = 1776;
+		vrLoc = 412;
+	};
+	FAF45AD0134B7FA700D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45877134B1B6C00D4C0F9 /* EPub.h */;
+		name = "EPub.h: 25";
+		rLen = 0;
+		rLoc = 398;
+		rType = 0;
+		vrLen = 468;
+		vrLoc = 256;
+	};
+	FAF45AD1134B7FA700D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */;
+		name = "EPub.m: 122";
+		rLen = 0;
+		rLoc = 4407;
+		rType = 0;
+		vrLen = 333;
+		vrLoc = 0;
+	};
+	FAF45AD2134B7FA700D4C0F9 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Unused variable 'epub'";
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 36;
+		rType = 1;
+	};
+	FAF45AD3134B7FA700D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 149";
+		rLen = 0;
+		rLoc = 4047;
+		rType = 0;
+		vrLen = 510;
+		vrLoc = 655;
+	};
+	FAF45AD4134B7FB000D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 149";
+		rLen = 0;
+		rLoc = 4047;
+		rType = 0;
+		vrLen = 510;
+		vrLoc = 655;
+	};
+	FAF45AD5134B7FB200D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 33";
+		rLen = 0;
+		rLoc = 1112;
+		rType = 0;
+		vrLen = 509;
+		vrLoc = 46;
+	};
+	FAF45AD9134B813600D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 37";
+		rLen = 0;
+		rLoc = 1105;
+		rType = 0;
+		vrLen = 589;
+		vrLoc = 422;
+	};
+	FAF45ADA134B817E00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 22";
+		rLen = 0;
+		rLoc = 413;
+		rType = 0;
+		vrLen = 540;
+		vrLoc = 46;
+	};
+	FAF45ADB134B817E00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 36";
+		rLen = 0;
+		rLoc = 1086;
+		rType = 0;
+		vrLen = 617;
+		vrLoc = 422;
+	};
+	FAF45ADC134B817E00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 36";
+		rLen = 0;
+		rLoc = 1086;
+		rType = 0;
+		vrLen = 615;
+		vrLoc = 424;
+	};
+	FAF45ADD134B818300D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 36";
+		rLen = 0;
+		rLoc = 1086;
+		rType = 0;
+		vrLen = 615;
+		vrLoc = 424;
+	};
+	FAF45AE7134B83BB00D4C0F9 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'epub' undeclared (first use in this function)";
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 44;
+		rType = 1;
+	};
+	FAF45AEA134B83CB00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 11";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 510;
+		vrLoc = 0;
+	};
+	FAF45AEB134B83CB00D4C0F9 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'epub' undeclared (first use in this function)";
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 44;
+		rType = 1;
+	};
+	FAF45AEC134B83CB00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 52";
+		rLen = 0;
+		rLoc = 1121;
+		rType = 0;
+		vrLen = 817;
+		vrLoc = 1173;
+	};
+	FAF45AEF134B83CB00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 60";
+		rLen = 0;
+		rLoc = 1341;
+		rType = 0;
+		vrLen = 1737;
+		vrLoc = 692;
+	};
+	FAF45AF2134B83CB00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 59";
+		rLen = 36;
+		rLoc = 1270;
+		rType = 0;
+		vrLen = 1628;
+		vrLoc = 394;
+	};
+	FAF45AF3134B83CB00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		rLen = 0;
+		rLoc = 9223372036854775844;
+		rType = 0;
+	};
+	FAF45AF4134B83CB00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 32";
+		rLen = 0;
+		rLoc = 749;
+		rType = 0;
+		vrLen = 1197;
+		vrLoc = 0;
+	};
+	FAF45AF7134B87A500D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 54";
+		rLen = 0;
+		rLoc = 1121;
+		rType = 0;
+		vrLen = 625;
+		vrLoc = 1078;
+	};
+	FAF45AF8134B87A500D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 61";
+		rLen = 0;
+		rLoc = 1294;
+		rType = 0;
+		vrLen = 1684;
+		vrLoc = 437;
+	};
+	FAF45AF9134B87A500D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 32";
+		rLen = 0;
+		rLoc = 749;
+		rType = 0;
+		vrLen = 1197;
+		vrLoc = 0;
+	};
+	FAF45AFC134B87D200D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 56";
+		rLen = 0;
+		rLoc = 1121;
+		rType = 0;
+		vrLen = 507;
+		vrLoc = 1044;
+	};
+	FAF45AFD134B87D200D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 27";
+		rLen = 0;
+		rLoc = 394;
+		rType = 0;
+		vrLen = 1353;
+		vrLoc = 155;
+	};
+	FAF45AFE134B87D200D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 32";
+		rLen = 0;
+		rLoc = 749;
+		rType = 0;
+		vrLen = 1197;
+		vrLoc = 0;
+	};
+	FAF45B01134B87E100D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 56";
+		rLen = 0;
+		rLoc = 1121;
+		rType = 0;
+		vrLen = 507;
+		vrLoc = 1046;
+	};
+	FAF45B02134B87E100D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 27";
+		rLen = 0;
+		rLoc = 394;
+		rType = 0;
+		vrLen = 1355;
+		vrLoc = 155;
+	};
+	FAF45B03134B87E100D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 32";
+		rLen = 0;
+		rLoc = 749;
+		rType = 0;
+		vrLen = 1197;
+		vrLoc = 0;
+	};
+	FAF45B11134B8CD500D4C0F9 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'epub' undeclared (first use in this function)";
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 44;
+		rType = 1;
+	};
+	FAF45B12134B8CD500D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 56";
+		rLen = 0;
+		rLoc = 1121;
+		rType = 0;
+		vrLen = 542;
+		vrLoc = 862;
+	};
+	FAF45B15134B8CE300D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 56";
+		rLen = 0;
+		rLoc = 1121;
+		rType = 0;
+		vrLen = 516;
+		vrLoc = 1046;
+	};
+	FAF45B16134B8CE300D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 54";
+		rLen = 0;
+		rLoc = 1117;
+		rType = 0;
+		vrLen = 1667;
+		vrLoc = 540;
+	};
+	FAF45B17134B8CE300D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 32";
+		rLen = 0;
+		rLoc = 749;
+		rType = 0;
+		vrLen = 1197;
+		vrLoc = 0;
+	};
+	FAF45B1F134B8D2D00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 45";
+		rLen = 0;
+		rLoc = 1121;
+		rType = 0;
+		vrLen = 622;
+		vrLoc = 979;
+	};
+	FAF45B20134B8D2D00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 68";
+		rLen = 0;
+		rLoc = 1747;
+		rType = 0;
+		vrLen = 1401;
+		vrLoc = 395;
+	};
+	FAF45B21134B8D2D00D4C0F9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 32";
+		rLen = 0;
+		rLoc = 749;
+		rType = 0;
+		vrLen = 1197;
+		vrLoc = 0;
 	};
 	FAFA8E4C134A006A000291E2 /* AePubReader */ = {
 		isa = PBXExecutable;
@@ -2797,6 +3584,8 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = AePubReader;
+		savedGlobals = {
+		};
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
@@ -3062,7 +3851,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 93";
 		rLen = 0;
-		rLoc = 1120;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 656;
 		vrLoc = 2172;
@@ -3112,7 +3901,7 @@
 		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
 		name = "DetailViewController.m: 46";
 		rLen = 0;
-		rLoc = 1118;
+		rLoc = 394;
 		rType = 0;
 		vrLen = 1566;
 		vrLoc = 633;

@@ -9,11 +9,14 @@
 #import "EPub.h"
 #import "ZipArchive.h"
 
+
 @implementation EPub
+
+@synthesize title, author, spineArray;
 
 - (id) initWithEPubPath:(NSString *)path{
 	if(self=[super init]){
-		epubPath = path;
+		epubFilePath = path;
 		spineArray = [[NSMutableArray alloc] init];
 		[self parseEpub];
 	}
@@ -21,7 +24,7 @@
 }
 
 - (void) parseEpub{
-	[self unzipAndSaveFileNamed:epubPath];
+	[self unzipAndSaveFileNamed:epubFilePath];
 
 	NSString* opfPath = [self parseManifestFile];
 	[self parseOPF:opfPath];
@@ -33,8 +36,8 @@
 	
 	ZipArchive* za = [[ZipArchive alloc] init];
 	NSLog(@"%@", fileName);
-	NSLog(@"unzipping %@", epubPath);
-	if( [za UnzipOpenFile:epubPath]){
+	NSLog(@"unzipping %@", epubFilePath);
+	if( [za UnzipOpenFile:epubFilePath]){
 		
 		NSString *strPath=[NSString stringWithFormat:@"%@/UnzippedEpub",[self applicationDocumentsDirectory]];
 		NSLog(@"%@", strPath);
@@ -105,10 +108,12 @@
 	
 	NSArray* itemRefsArray = [opfFile nodesForXPath:@"//opf:itemref" namespaceMappings:[NSDictionary dictionaryWithObject:@"http://www.idpf.org/2007/opf" forKey:@"opf"] error:nil];
 	NSLog(@"itemRefsArray size: %d", [itemRefsArray count]);
+	NSMutableArray* tmpArray = [[NSMutableArray alloc] init];
 	for (CXMLElement* element in itemRefsArray) {
-		[spineArray addObject:[NSString stringWithFormat:@"%@%@", ebookBasePath, [itemDictionary objectForKey:[[element attributeForName:@"idref"] stringValue]]]];
+		[tmpArray addObject:[NSString stringWithFormat:@"%@%@", ebookBasePath, [itemDictionary objectForKey:[[element attributeForName:@"idref"] stringValue]]]];
 		NSLog(@"%@", [NSString stringWithFormat:@"%@%@", ebookBasePath, [itemDictionary objectForKey:[[element attributeForName:@"idref"] stringValue]]]);
 	}
+	spineArray = [NSArray arrayWithArray:tmpArray]; 
 
 }
 

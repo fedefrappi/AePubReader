@@ -8,7 +8,6 @@
 
 #import "DetailViewController.h"
 #import "RootViewController.h"
-#import "EPub.h"
 
 @interface DetailViewController ()
 @property (nonatomic, retain) UIPopoverController *popoverController;
@@ -19,7 +18,7 @@
 
 @implementation DetailViewController
 
-@synthesize toolbar, popoverController, detailItem, detailDescriptionLabel;
+@synthesize toolbar, popoverController, detailItem, titleLabel, authorLabel, webView, nextSpineButton, prevSpineButton;
 
 #pragma mark -
 #pragma mark Managing the detail item
@@ -41,10 +40,32 @@
     // Update the user interface for the detail item.
 	
 	// LOAD THE EPUB
-    [detailDescriptionLabel setText:detailItem];
-	[[EPub alloc] initWithEPubPath:[[NSBundle mainBundle] pathForResource:detailItem ofType:@"epub"]];
+	loadedEpub = [[[EPub alloc] initWithEPubPath:[[NSBundle mainBundle] pathForResource:detailItem ofType:@"epub"]] retain];
+	
+	[titleLabel setText:loadedEpub.title];
+	[authorLabel setText:loadedEpub.author];
+	currentSpineIndex = 0;
+	
+	[self loadSpine: currentSpineIndex];
 }
 
+- (void) loadSpine:(int)spineIndex{
+	NSURL* url = [NSURL fileURLWithPath:[loadedEpub.spineArray objectAtIndex:spineIndex]];
+	[webView loadRequest:[NSURLRequest requestWithURL:url]];
+}
+
+- (IBAction)nextButtonClicked:(id)sender {
+	NSLog(@"NEXT");
+	currentSpineIndex = currentSpineIndex +1;
+    [self loadSpine:currentSpineIndex];
+}
+
+- (IBAction)prevButtonClicked:(id)sender {
+	NSLog(@"PREV");
+	currentSpineIndex = currentSpineIndex -1;
+    [self loadSpine:currentSpineIndex];
+	
+}
 
 #pragma mark -
 #pragma mark Split view support
@@ -135,7 +156,7 @@
     [toolbar release];
     
     [detailItem release];
-    [detailDescriptionLabel release];
+    [titleLabel release];
     [super dealloc];
 }
 

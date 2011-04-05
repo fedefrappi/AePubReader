@@ -10,12 +10,22 @@
 #import "TouchXML.h"
 
 
+//TODO: parse author, title
+//		save epubBasePath
+		
+
 @interface EPub : NSObject {
 	NSString* title;
 	NSString* author;
-	NSMutableArray* spineArray;
-	NSString* epubPath;
+	NSArray* spineArray;
+	NSString* epubBasePath;
+	NSString* epubFilePath;
 }
+
+@property(nonatomic, retain) NSString* title;
+@property(nonatomic, retain) NSString* author;
+@property(nonatomic, retain) NSArray* spineArray;
+
 
 - (id) initWithEPubPath:(NSString*)path;
 - (void) parseEpub;
