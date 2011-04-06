@@ -131,7 +131,7 @@
 
 
 - (void)webViewDidFinishLoad:(UIWebView *)theWebView{
-	
+		
 	NSString *varMySheet = @"var mySheet = document.styleSheets[0];";
 	
 	NSString *addCSSRule =  @"function addCSSRule(selector, newRule) {"
@@ -162,6 +162,8 @@
 	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];
 	pagesInCurrentSpineCount = (int)((float)totalWidth/webView.bounds.size.width);
 	
+	[self gotoPageInCurrentSpine:currentPageInSpineIndex];
+	
 }
 
 - (void) updatePageCount{
@@ -176,9 +178,9 @@
 }
 
 - (int) getPageCountForSpineAtIndex:(int) spineIndex{
-	
+
 	return spineIndex;
-	
+
 }
 
 #pragma mark -
@@ -222,6 +224,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[webView setDelegate:self];
+	
 	UIScrollView* sv = nil;
 	for (UIView* v in  webView.subviews) {
 		if([v isKindOfClass:[UIScrollView class]]){
@@ -231,6 +234,15 @@
 		}
 	}
 	currentTextSize = 100;
+	
+	UISwipeGestureRecognizer* rightSwipeRecognizer = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(nextPageClicked:)] autorelease];
+	[rightSwipeRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
+	
+	UISwipeGestureRecognizer* leftSwipeRecognizer = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(prevPageClicked:)] autorelease];
+	[leftSwipeRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
+	
+	[webView addGestureRecognizer:rightSwipeRecognizer];
+	[webView addGestureRecognizer:leftSwipeRecognizer];
 }
 
 /*

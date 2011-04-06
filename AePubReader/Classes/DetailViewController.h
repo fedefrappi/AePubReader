@@ -44,7 +44,6 @@
 - (IBAction) increaseTextSizeClicked:(id)sender;
 - (IBAction) decreaseTextSizeClicked:(id)sender;
 
-- (void) loadSpine:(int) spineIndex;
 - (void) gotoPageInCurrentSpine: (int)pageIndex;
 - (void) updatePageCount;
 - (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex;
