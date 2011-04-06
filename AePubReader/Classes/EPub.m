@@ -113,7 +113,7 @@
 		[tmpArray addObject:[NSString stringWithFormat:@"%@%@", ebookBasePath, [itemDictionary objectForKey:[[element attributeForName:@"idref"] stringValue]]]];
 		NSLog(@"%@", [NSString stringWithFormat:@"%@%@", ebookBasePath, [itemDictionary objectForKey:[[element attributeForName:@"idref"] stringValue]]]);
 	}
-	spineArray = [NSArray arrayWithArray:tmpArray]; 
+	spineArray = [[NSArray arrayWithArray:tmpArray] retain]; 
 
 }
 

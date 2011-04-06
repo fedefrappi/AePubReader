@@ -18,7 +18,8 @@
 
 @implementation DetailViewController
 
-@synthesize toolbar, popoverController, detailItem, titleLabel, authorLabel, webView, nextSpineButton, prevSpineButton;
+@synthesize toolbar, popoverController, detailItem, titleLabel, authorLabel, webView, nextSpineButton, prevSpineButton, loadedEpub; 
+@synthesize prevPageButton, nextPageButton, decTextSizeButton, incTextSizeButton;
 
 #pragma mark -
 #pragma mark Managing the detail item
@@ -40,30 +41,143 @@
     // Update the user interface for the detail item.
 	
 	// LOAD THE EPUB
-	loadedEpub = [[[EPub alloc] initWithEPubPath:[[NSBundle mainBundle] pathForResource:detailItem ofType:@"epub"]] retain];
+	loadedEpub = [[EPub alloc] initWithEPubPath:[[NSBundle mainBundle] pathForResource:detailItem ofType:@"epub"]];
 	
 	[titleLabel setText:loadedEpub.title];
 	[authorLabel setText:loadedEpub.author];
 	currentSpineIndex = 0;
 	
-	[self loadSpine: currentSpineIndex];
+	[self loadSpine:currentSpineIndex atPageIndex:0];
 }
 
-- (void) loadSpine:(int)spineIndex{
+- (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex{
+	
+	
 	NSURL* url = [NSURL fileURLWithPath:[loadedEpub.spineArray objectAtIndex:spineIndex]];
 	[webView loadRequest:[NSURLRequest requestWithURL:url]];
+	currentPageInSpineIndex = pageIndex;
+	
+}
+
+- (void) gotoPageInCurrentSpine:(int)pageIndex{
+	float pageOffset = pageIndex*webView.bounds.size.width;
+	NSString* goToOffsetFunc = [NSString stringWithFormat:@" function pageScroll(xOffset){ window.scroll(xOffset,0); } "];
+	NSString* goTo =[NSString stringWithFormat:@"pageScroll(%f)", pageOffset];
+	
+	[webView stringByEvaluatingJavaScriptFromString:goToOffsetFunc];
+	[webView stringByEvaluatingJavaScriptFromString:goTo];	
 }
 
 - (IBAction)nextButtonClicked:(id)sender {
 	NSLog(@"NEXT");
-	currentSpineIndex = currentSpineIndex +1;
-    [self loadSpine:currentSpineIndex];
+	if(currentSpineIndex+1<[loadedEpub.spineArray count]){
+		[self loadSpine:++currentSpineIndex atPageIndex:0];
+	}
 }
 
 - (IBAction)prevButtonClicked:(id)sender {
 	NSLog(@"PREV");
-	currentSpineIndex = currentSpineIndex -1;
-    [self loadSpine:currentSpineIndex];
+	if(currentSpineIndex-1>=0){
+		[self loadSpine:--currentSpineIndex atPageIndex:0];
+	}
+	
+}
+
+- (IBAction)nextPageClicked:(id)sender {
+	NSLog(@"NEXT");
+	if(currentPageInSpineIndex+1<pagesInCurrentSpineCount){
+		[self gotoPageInCurrentSpine:++currentPageInSpineIndex];
+	} else {
+		[self nextButtonClicked:self];
+	}
+}
+
+- (IBAction)prevPageClicked:(id)sender {
+	NSLog(@"PREV");
+	if(currentPageInSpineIndex-1>=0){
+		[self gotoPageInCurrentSpine:--currentPageInSpineIndex];
+	} else {
+		if(currentSpineIndex!=0){
+			int targetPage = [self getPageCountForSpineAtIndex:(currentSpineIndex-1)];
+			[self loadSpine:--currentSpineIndex atPageIndex:targetPage-1];
+
+		}
+	}	
+}
+
+
+- (IBAction) increaseTextSizeClicked:(id)sender{
+	currentTextSize = currentTextSize+25<=200?currentTextSize+25:currentTextSize;
+	
+	NSString *insertRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')", currentTextSize];
+	
+	[webView stringByEvaluatingJavaScriptFromString:insertRule];
+	
+	[self updatePageCount];
+
+	
+}
+- (IBAction) decreaseTextSizeClicked:(id)sender{
+	currentTextSize = currentTextSize-25>=50?currentTextSize-25:currentTextSize;
+
+	NSString *insertRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')", currentTextSize];
+	
+	[webView stringByEvaluatingJavaScriptFromString:insertRule];
+	
+	[self updatePageCount];
+
+	
+}
+
+
+- (void)webViewDidFinishLoad:(UIWebView *)theWebView{
+	
+	NSString *varMySheet = @"var mySheet = document.styleSheets[0];";
+	
+	NSString *addCSSRule =  @"function addCSSRule(selector, newRule) {"
+	"if (mySheet.addRule) {"
+	"mySheet.addRule(selector, newRule);"								// For Internet Explorer
+	"} else {"
+	"ruleIndex = mySheet.cssRules.length;"
+	"mySheet.insertRule(selector + '{' + newRule + ';}', ruleIndex);"   // For Firefox, Chrome, etc.
+	"}"
+	"}";
+	
+	NSLog(@"w:%f h:%f", webView.bounds.size.width, webView.bounds.size.height);
+	
+	NSString *insertRule1 = [NSString stringWithFormat:@"addCSSRule('html', 'padding: 0px; height: %fpx; -webkit-column-gap: 0px; -webkit-column-width: %fpx;')", webView.frame.size.height, webView.frame.size.width];
+	NSString *insertRule2 = [NSString stringWithFormat:@"addCSSRule('p', 'text-align: justify;')"];
+	NSString *setTextSizeRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')", currentTextSize];
+	
+	[webView stringByEvaluatingJavaScriptFromString:varMySheet];
+	
+	[webView stringByEvaluatingJavaScriptFromString:addCSSRule];
+	
+	[webView stringByEvaluatingJavaScriptFromString:setTextSizeRule];
+	
+	[webView stringByEvaluatingJavaScriptFromString:insertRule1];
+	
+	[webView stringByEvaluatingJavaScriptFromString:insertRule2];
+	
+	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];
+	pagesInCurrentSpineCount = (int)((float)totalWidth/webView.bounds.size.width);
+	
+}
+
+- (void) updatePageCount{
+	
+	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];
+	pagesInCurrentSpineCount = (int)((float)totalWidth/webView.bounds.size.width);
+	
+	totalPagesCount = 0;
+	for(int i=0; i<[loadedEpub.spineArray count]; i++){
+		totalPagesCount += [self getPageCountForSpineAtIndex:i];
+	}
+}
+
+- (int) getPageCountForSpineAtIndex:(int) spineIndex{
+	
+	return spineIndex;
 	
 }
 
@@ -104,12 +218,20 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
  // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[webView setDelegate:self];
+	UIScrollView* sv = nil;
+	for (UIView* v in  webView.subviews) {
+		if([v isKindOfClass:[UIScrollView class]]){
+			sv = (UIScrollView*) v;
+			sv.scrollEnabled = NO;
+			sv.bounces = NO;
+		}
+	}
+	currentTextSize = 100;
 }
- */
 
 /*
 - (void)viewWillAppear:(BOOL)animated {

@@ -76,7 +76,30 @@
 						<object class="NSMutableArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUIBarButtonItem" id="646904719">
-								<string key="IBUITitle">Prev</string>
+								<string key="IBUITitle">Chapter--</string>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUIToolbar" ref="410698538"/>
+							</object>
+							<object class="IBUIBarButtonItem" id="340330519">
+								<string key="IBUITitle">Page--</string>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUIToolbar" ref="410698538"/>
+							</object>
+							<object class="IBUIBarButtonItem" id="386136539">
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<reference key="IBUIToolbar" ref="410698538"/>
+								<int key="IBUISystemItemIdentifier">5</int>
+							</object>
+							<object class="IBUIBarButtonItem" id="448919007">
+								<string key="IBUITitle">a</string>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUIToolbar" ref="410698538"/>
+							</object>
+							<object class="IBUIBarButtonItem" id="534207354">
+								<string key="IBUITitle">A</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="410698538"/>
@@ -86,8 +109,14 @@
 								<reference key="IBUIToolbar" ref="410698538"/>
 								<int key="IBUISystemItemIdentifier">5</int>
 							</object>
+							<object class="IBUIBarButtonItem" id="178403323">
+								<string key="IBUITitle">Page++</string>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUIToolbar" ref="410698538"/>
+							</object>
 							<object class="IBUIBarButtonItem" id="775042619">
-								<string key="IBUITitle">Next</string>
+								<string key="IBUITitle">Chapter++</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="410698538"/>
@@ -210,6 +239,70 @@
 					</object>
 					<int key="connectionID">79</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">prevPageClicked:</string>
+						<reference key="source" ref="340330519"/>
+						<reference key="destination" ref="841351856"/>
+					</object>
+					<int key="connectionID">82</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">nextPageClicked:</string>
+						<reference key="source" ref="178403323"/>
+						<reference key="destination" ref="841351856"/>
+					</object>
+					<int key="connectionID">83</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">prevPageButton</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="340330519"/>
+					</object>
+					<int key="connectionID">84</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">nextPageButton</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="178403323"/>
+					</object>
+					<int key="connectionID">85</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">decreaseTextSizeClicked:</string>
+						<reference key="source" ref="448919007"/>
+						<reference key="destination" ref="841351856"/>
+					</object>
+					<int key="connectionID">89</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">increaseTextSizeClicked:</string>
+						<reference key="source" ref="534207354"/>
+						<reference key="destination" ref="841351856"/>
+					</object>
+					<int key="connectionID">90</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">decTextSizeButton</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="448919007"/>
+					</object>
+					<int key="connectionID">91</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">incTextSizeButton</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="534207354"/>
+					</object>
+					<int key="connectionID">92</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -256,6 +349,11 @@
 							<reference ref="646904719"/>
 							<reference ref="875449242"/>
 							<reference ref="775042619"/>
+							<reference ref="340330519"/>
+							<reference ref="178403323"/>
+							<reference ref="448919007"/>
+							<reference ref="386136539"/>
+							<reference ref="534207354"/>
 						</object>
 						<reference key="parent" ref="647120888"/>
 					</object>
@@ -284,6 +382,31 @@
 						<reference key="object" ref="775042619"/>
 						<reference key="parent" ref="410698538"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">80</int>
+						<reference key="object" ref="340330519"/>
+						<reference key="parent" ref="410698538"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">81</int>
+						<reference key="object" ref="178403323"/>
+						<reference key="parent" ref="410698538"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">86</int>
+						<reference key="object" ref="448919007"/>
+						<reference key="parent" ref="410698538"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">87</int>
+						<reference key="object" ref="386136539"/>
+						<reference key="parent" ref="410698538"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">88</int>
+						<reference key="object" ref="534207354"/>
+						<reference key="parent" ref="410698538"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -305,6 +428,11 @@
 					<string>74.IBPluginDependency</string>
 					<string>8.IBEditorWindowLastContentRect</string>
 					<string>8.IBPluginDependency</string>
+					<string>80.IBPluginDependency</string>
+					<string>81.IBPluginDependency</string>
+					<string>86.IBPluginDependency</string>
+					<string>87.IBPluginDependency</string>
+					<string>88.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -329,7 +457,12 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{332, 110}, {783, 735}}</string>
+					<string>{{318, 70}, {783, 786}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
@@ -349,7 +482,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">79</int>
+			<int key="maxID">92</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -361,11 +494,19 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>decreaseTextSizeClicked:</string>
+							<string>increaseTextSizeClicked:</string>
 							<string>nextButtonClicked:</string>
+							<string>nextPageClicked:</string>
 							<string>prevButtonClicked:</string>
+							<string>prevPageClicked:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -374,17 +515,37 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>decreaseTextSizeClicked:</string>
+							<string>increaseTextSizeClicked:</string>
 							<string>nextButtonClicked:</string>
+							<string>nextPageClicked:</string>
 							<string>prevButtonClicked:</string>
+							<string>prevPageClicked:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">decreaseTextSizeClicked:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">increaseTextSizeClicked:</string>
+								<string key="candidateClassName">id</string>
+							</object>
 							<object class="IBActionInfo">
 								<string key="name">nextButtonClicked:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
+								<string key="name">nextPageClicked:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
 								<string key="name">prevButtonClicked:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">prevPageClicked:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>
@@ -394,7 +555,11 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>authorLabel</string>
+							<string>decTextSizeButton</string>
+							<string>incTextSizeButton</string>
+							<string>nextPageButton</string>
 							<string>nextSpineButton</string>
+							<string>prevPageButton</string>
 							<string>prevSpineButton</string>
 							<string>titleLabel</string>
 							<string>toolbar</string>
@@ -403,6 +568,10 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UILabel</string>
+							<string>UIBarButtonItem</string>
+							<string>UIBarButtonItem</string>
+							<string>UIBarButtonItem</string>
+							<string>UIBarButtonItem</string>
 							<string>UIBarButtonItem</string>
 							<string>UIBarButtonItem</string>
 							<string>UILabel</string>
@@ -415,7 +584,11 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>authorLabel</string>
+							<string>decTextSizeButton</string>
+							<string>incTextSizeButton</string>
+							<string>nextPageButton</string>
 							<string>nextSpineButton</string>
+							<string>prevPageButton</string>
 							<string>prevSpineButton</string>
 							<string>titleLabel</string>
 							<string>toolbar</string>
@@ -428,7 +601,23 @@
 								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">decTextSizeButton</string>
+								<string key="candidateClassName">UIBarButtonItem</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">incTextSizeButton</string>
+								<string key="candidateClassName">UIBarButtonItem</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">nextPageButton</string>
+								<string key="candidateClassName">UIBarButtonItem</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">nextSpineButton</string>
+								<string key="candidateClassName">UIBarButtonItem</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">prevPageButton</string>
 								<string key="candidateClassName">UIBarButtonItem</string>
 							</object>
 							<object class="IBToOneOutletInfo">
