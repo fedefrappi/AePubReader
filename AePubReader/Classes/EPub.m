@@ -8,6 +8,7 @@
 
 #import "EPub.h"
 #import "ZipArchive.h"
+#import "Chapter.h"
 
 
 @implementation EPub
@@ -15,7 +16,7 @@
 @synthesize title, author, spineArray;
 
 - (id) initWithEPubPath:(NSString *)path{
-	if(self=[super init]){
+	if((self=[super init])){
 		epubFilePath = path;
 		spineArray = [[NSMutableArray alloc] init];
 		[self parseEpub];
@@ -109,9 +110,16 @@
 	NSArray* itemRefsArray = [opfFile nodesForXPath:@"//opf:itemref" namespaceMappings:[NSDictionary dictionaryWithObject:@"http://www.idpf.org/2007/opf" forKey:@"opf"] error:nil];
 	NSLog(@"itemRefsArray size: %d", [itemRefsArray count]);
 	NSMutableArray* tmpArray = [[NSMutableArray alloc] init];
+    int count = 0;
 	for (CXMLElement* element in itemRefsArray) {
-		[tmpArray addObject:[NSString stringWithFormat:@"%@%@", ebookBasePath, [itemDictionary objectForKey:[[element attributeForName:@"idref"] stringValue]]]];
-		NSLog(@"%@", [NSString stringWithFormat:@"%@%@", ebookBasePath, [itemDictionary objectForKey:[[element attributeForName:@"idref"] stringValue]]]);
+        Chapter* tmpChapter = [[[Chapter alloc]  initWithPath:[NSString stringWithFormat:@"%@%@", 
+                                                              ebookBasePath,          
+                                                              [itemDictionary objectForKey:[
+                                                                            [element attributeForName:@"idref"]stringValue]]
+                                                              ]
+                                                title:[NSString stringWithFormat:@"%d", count] 
+                                                chapterIndex:count++] retain];
+		[tmpArray addObject:tmpChapter];
 	}
 	spineArray = [[NSArray arrayWithArray:tmpArray] retain]; 
 

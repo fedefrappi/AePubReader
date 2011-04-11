@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ZipArchive.h"
 #import "EPub.h"
+#import "Chapter.h"
 
-@interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate, UIWebViewDelegate> {
+@interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate, UIWebViewDelegate, ChapterProtocol> {
     
     UIPopoverController *popoverController;
     UIToolbar *toolbar;
@@ -45,10 +46,13 @@
 - (IBAction) decreaseTextSizeClicked:(id)sender;
 
 - (void) gotoPageInCurrentSpine: (int)pageIndex;
-- (void) updatePageCount;
+- (void) updatePagination;
 - (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex;
 - (int) getPageCountForSpineAtIndex:(int) spineIndex;
 - (void) webViewDidFinishLoad:(UIWebView *)theWebView;
+- (void) loadEpub:(NSString*) epubName;
+
+- (void) chapterDidFinishLoad:(Chapter *)chapter;
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 

@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "RootViewController.h"
+#import "Chapter.h"
 
 @interface DetailViewController ()
 @property (nonatomic, retain) UIPopoverController *popoverController;
@@ -40,20 +41,29 @@
 - (void)configureView {
     // Update the user interface for the detail item.
 	
-	// LOAD THE EPUB
-	loadedEpub = [[EPub alloc] initWithEPubPath:[[NSBundle mainBundle] pathForResource:detailItem ofType:@"epub"]];
-	
-	[titleLabel setText:loadedEpub.title];
-	[authorLabel setText:loadedEpub.author];
 	currentSpineIndex = 0;
-	
-	[self loadSpine:currentSpineIndex atPageIndex:0];
+    currentPageInSpineIndex = 0;
+	[self loadEpub:detailItem];
+}
+
+- (void) loadEpub:(NSString*) epubName{
+    loadedEpub = [[EPub alloc] initWithEPubPath:[[NSBundle mainBundle] pathForResource:epubName ofType:@"epub"]];
+    [self updatePagination];
+    
+}
+
+- (void) chapterDidFinishLoad:(Chapter *)chapter{
+    totalPagesCount+=chapter.pageCount;
+    if(chapter.chapterIndex==currentSpineIndex){
+        [self loadSpine:currentSpineIndex atPageIndex:currentPageInSpineIndex];
+    }
 }
 
 - (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex{
 	
+    NSLog(@"%d", [[loadedEpub.spineArray objectAtIndex:spineIndex] pageCount]);
 	
-	NSURL* url = [NSURL fileURLWithPath:[loadedEpub.spineArray objectAtIndex:spineIndex]];
+	NSURL* url = [NSURL fileURLWithPath:[[loadedEpub.spineArray objectAtIndex:spineIndex] spinePath]];
 	[webView loadRequest:[NSURLRequest requestWithURL:url]];
 	currentPageInSpineIndex = pageIndex;
 	
@@ -69,14 +79,12 @@
 }
 
 - (IBAction)nextButtonClicked:(id)sender {
-	NSLog(@"NEXT");
 	if(currentSpineIndex+1<[loadedEpub.spineArray count]){
 		[self loadSpine:++currentSpineIndex atPageIndex:0];
 	}
 }
 
 - (IBAction)prevButtonClicked:(id)sender {
-	NSLog(@"PREV");
 	if(currentSpineIndex-1>=0){
 		[self loadSpine:--currentSpineIndex atPageIndex:0];
 	}
@@ -84,7 +92,6 @@
 }
 
 - (IBAction)nextPageClicked:(id)sender {
-	NSLog(@"NEXT");
 	if(currentPageInSpineIndex+1<pagesInCurrentSpineCount){
 		[self gotoPageInCurrentSpine:++currentPageInSpineIndex];
 	} else {
@@ -93,7 +100,6 @@
 }
 
 - (IBAction)prevPageClicked:(id)sender {
-	NSLog(@"PREV");
 	if(currentPageInSpineIndex-1>=0){
 		[self gotoPageInCurrentSpine:--currentPageInSpineIndex];
 	} else {
@@ -113,7 +119,7 @@
 	
 	[webView stringByEvaluatingJavaScriptFromString:insertRule];
 	
-	[self updatePageCount];
+	[self updatePagination];
 
 	
 }
@@ -124,7 +130,7 @@
 	
 	[webView stringByEvaluatingJavaScriptFromString:insertRule];
 	
-	[self updatePageCount];
+	[self updatePagination];
 
 	
 }
@@ -166,20 +172,21 @@
 	
 }
 
-- (void) updatePageCount{
+- (void) updatePagination{
 	
 	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];
 	pagesInCurrentSpineCount = (int)((float)totalWidth/webView.bounds.size.width);
 	
-	totalPagesCount = 0;
-	for(int i=0; i<[loadedEpub.spineArray count]; i++){
-		totalPagesCount += [self getPageCountForSpineAtIndex:i];
-	}
+    totalPagesCount=0;
+    for (Chapter* chapter in loadedEpub.spineArray) {
+        [chapter setDelegate:self];
+        [chapter loadChapterWithWindowSize:webView.bounds fontPercentSize:currentTextSize];
+    }
 }
 
 - (int) getPageCountForSpineAtIndex:(int) spineIndex{
-
-	return spineIndex;
+    
+	return [[loadedEpub.spineArray objectAtIndex:spineIndex] pageCount];
 
 }
 
