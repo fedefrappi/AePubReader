@@ -24,7 +24,7 @@
 
 - (void) loadChapterWithWindowSize:(CGRect)theWindowSize fontPercentSize:(int) theFontPercentSize{
     fontPercentSize = theFontPercentSize;
-    NSLog(@"%d", theFontPercentSize);
+    NSLog(@"webviewSize: %f * %f, fontPercentSize: %d", theWindowSize.size.width, theWindowSize.size.height,theFontPercentSize);
     UIWebView* webView = [[UIWebView alloc] initWithFrame:theWindowSize];
     [webView setDelegate:self];
     NSURLRequest* urlRequest = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:spinePath]];
@@ -66,7 +66,7 @@
 	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];
 	pageCount = (int)((float)totalWidth/webView.bounds.size.width);
 	
-    NSLog(@"%d %f", totalWidth, webView.bounds.size.width);
+    NSLog(@"Chapter %d -> %d %f", chapterIndex, totalWidth, webView.bounds.size.width);
     
     [webView dealloc];
     [delegate chapterDidFinishLoad:self];

@@ -62,7 +62,7 @@
 
 - (NSInteger)tableView:(UITableView *)aTableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 10;
+    return 3;
 }
 
 
@@ -78,7 +78,13 @@
     }
     
     // Configure the cell.
-    cell.textLabel.text = [NSString stringWithFormat:@"Row %d", indexPath.row];
+    if(indexPath.row == 0){
+        cell.textLabel.text = [NSString stringWithFormat:@"Shakespeare"];        
+    } else if(indexPath.row == 1){
+        cell.textLabel.text = [NSString stringWithFormat:@"Data Mining"];        
+    } else if(indexPath.row == 2){
+        cell.textLabel.text = [NSString stringWithFormat:@"Victor Hugo"];        
+    }
     return cell;
 }
 
@@ -131,7 +137,13 @@
     /*
      When a row is selected, set the detail view controller's detail item to the item associated with the selected row.
      */
-    detailViewController.detailItem = [NSString stringWithString:@"mining"];
+    if(indexPath.row == 0){
+        detailViewController.detailItem = [NSString stringWithFormat:@"shak"];        
+    } else if(indexPath.row == 1){
+        detailViewController.detailItem = [NSString stringWithFormat:@"mining"];        
+    } else if(indexPath.row == 2){
+        detailViewController.detailItem = [NSString stringWithFormat:@"vhugo"];        
+    }
 }
 
 

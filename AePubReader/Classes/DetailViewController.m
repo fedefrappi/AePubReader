@@ -12,7 +12,6 @@
 
 @interface DetailViewController ()
 @property (nonatomic, retain) UIPopoverController *popoverController;
-- (void)configureView;
 @end
 
 
@@ -30,23 +29,16 @@
  */
 - (void)setDetailItem:(NSString*)newDetailItem {
 	detailItem = newDetailItem;
-	[self configureView];
+	[self loadEpub:detailItem];
 	
     if (self.popoverController != nil) {
         [self.popoverController dismissPopoverAnimated:YES];
     }        
 }
 
-
-- (void)configureView {
-    // Update the user interface for the detail item.
-	
+- (void) loadEpub:(NSString*) epubName{
 	currentSpineIndex = 0;
     currentPageInSpineIndex = 0;
-	[self loadEpub:detailItem];
-}
-
-- (void) loadEpub:(NSString*) epubName{
     loadedEpub = [[EPub alloc] initWithEPubPath:[[NSBundle mainBundle] pathForResource:epubName ofType:@"epub"]];
     [self updatePagination];
     
@@ -57,6 +49,11 @@
     if(chapter.chapterIndex==currentSpineIndex){
         [self loadSpine:currentSpineIndex atPageIndex:currentPageInSpineIndex];
     }
+	if(chapter.chapterIndex + 1 < [loadedEpub.spineArray count]){
+		[[loadedEpub.spineArray objectAtIndex:chapter.chapterIndex+1] setDelegate:self];
+		[[loadedEpub.spineArray objectAtIndex:chapter.chapterIndex+1] loadChapterWithWindowSize:webView.bounds fontPercentSize:currentTextSize];
+
+	}
 }
 
 - (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex{
@@ -178,10 +175,14 @@
 	pagesInCurrentSpineCount = (int)((float)totalWidth/webView.bounds.size.width);
 	
     totalPagesCount=0;
-    for (Chapter* chapter in loadedEpub.spineArray) {
+    /*
+	for (Chapter* chapter in loadedEpub.spineArray) {
         [chapter setDelegate:self];
         [chapter loadChapterWithWindowSize:webView.bounds fontPercentSize:currentTextSize];
     }
+	 */
+	[[loadedEpub.spineArray objectAtIndex:0] setDelegate:self];
+	[[loadedEpub.spineArray objectAtIndex:0] loadChapterWithWindowSize:webView.bounds fontPercentSize:currentTextSize];
 }
 
 - (int) getPageCountForSpineAtIndex:(int) spineIndex{

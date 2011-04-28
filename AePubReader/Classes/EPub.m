@@ -112,11 +112,7 @@
 	NSMutableArray* tmpArray = [[NSMutableArray alloc] init];
     int count = 0;
 	for (CXMLElement* element in itemRefsArray) {
-        Chapter* tmpChapter = [[[Chapter alloc]  initWithPath:[NSString stringWithFormat:@"%@%@", 
-                                                              ebookBasePath,          
-                                                              [itemDictionary objectForKey:[
-                                                                            [element attributeForName:@"idref"]stringValue]]
-                                                              ]
+        Chapter* tmpChapter = [[[Chapter alloc] initWithPath:[NSString stringWithFormat:@"%@%@", ebookBasePath, [itemDictionary objectForKey:[[element attributeForName:@"idref"] stringValue]]]
                                                 title:[NSString stringWithFormat:@"%d", count] 
                                                 chapterIndex:count++] retain];
 		[tmpArray addObject:tmpChapter];

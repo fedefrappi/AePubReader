@@ -32,13 +32,14 @@
 		FAF45857134B18F400D4C0F9 /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF45847134B18F400D4C0F9 /* CXMLNode_XPathExtensions.m */; };
 		FAF45858134B18F400D4C0F9 /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF4584A134B18F400D4C0F9 /* CTidy.m */; };
 		FAF45879134B1B6C00D4C0F9 /* EPub.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF45878134B1B6C00D4C0F9 /* EPub.m */; };
-		FAFA8E86134A0603000291E2 /* hugo.epub in Resources */ = {isa = PBXBuildFile; fileRef = FAFA8E85134A0603000291E2 /* hugo.epub */; };
+		FAFA8E86134A0603000291E2 /* vhugo.epub in Resources */ = {isa = PBXBuildFile; fileRef = FAFA8E85134A0603000291E2 /* vhugo.epub */; };
 		FAFA8EA7134A06D6000291E2 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = FAFA8E9E134A06D6000291E2 /* ioapi.c */; };
 		FAFA8EA8134A06D6000291E2 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = FAFA8EA0134A06D6000291E2 /* mztools.c */; };
 		FAFA8EA9134A06D6000291E2 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = FAFA8EA2134A06D6000291E2 /* unzip.c */; };
 		FAFA8EAA134A06D6000291E2 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = FAFA8EA4134A06D6000291E2 /* zip.c */; };
 		FAFA8EAB134A06D6000291E2 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAFA8EA6134A06D6000291E2 /* ZipArchive.mm */; };
 		FAFA8EF8134A0D0A000291E2 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFA8EF7134A0D0A000291E2 /* libz.1.2.3.dylib */; };
+		FAFD81491369BB3A0038F7C5 /* shak.epub in Resources */ = {isa = PBXBuildFile; fileRef = FAFD81481369BB3A0038F7C5 /* shak.epub */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +51,7 @@
 		28042007108E984D000629CD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		28042008108E984D000629CD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		28042009108E984D000629CD /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		2804200A108E984D000629CD /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		2804200A108E984D000629CD /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; usesTabs = 1; wrapsLines = 0; };
 		2804203B108E9BAB000629CD /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AAE50D9B0CCF005BE974 /* AePubReader_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AePubReader_Prefix.pch; sourceTree = "<group>"; };
@@ -59,7 +60,7 @@
 		8D1107310486CEB800E47090 /* AePubReader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AePubReader-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		FA7F88E3134E792100EEFEA7 /* mining.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = mining.epub; sourceTree = "<group>"; };
 		FAA85385134F422F0035F235 /* Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chapter.h; sourceTree = "<group>"; };
-		FAA85386134F422F0035F235 /* Chapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; };
+		FAA85386134F422F0035F235 /* Chapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; wrapsLines = 0; };
 		FAF45830134B18F400D4C0F9 /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
 		FAF45831134B18F400D4C0F9 /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
 		FAF45832134B18F400D4C0F9 /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
@@ -88,8 +89,8 @@
 		FAF4584A134B18F400D4C0F9 /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
 		FAF4584B134B18F400D4C0F9 /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
 		FAF45877134B1B6C00D4C0F9 /* EPub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPub.h; sourceTree = "<group>"; };
-		FAF45878134B1B6C00D4C0F9 /* EPub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPub.m; sourceTree = "<group>"; };
-		FAFA8E85134A0603000291E2 /* hugo.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = hugo.epub; sourceTree = "<group>"; };
+		FAF45878134B1B6C00D4C0F9 /* EPub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPub.m; sourceTree = "<group>"; wrapsLines = 0; };
+		FAFA8E85134A0603000291E2 /* vhugo.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = vhugo.epub; sourceTree = "<group>"; };
 		FAFA8E9B134A06D6000291E2 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		FAFA8E9D134A06D6000291E2 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		FAFA8E9E134A06D6000291E2 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 		FAFA8EA5134A06D6000291E2 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 		FAFA8EA6134A06D6000291E2 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
 		FAFA8EF7134A0D0A000291E2 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		FAFD81481369BB3A0038F7C5 /* shak.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = shak.epub; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +172,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FAFD81481369BB3A0038F7C5 /* shak.epub */,
 				FA7F88E3134E792100EEFEA7 /* mining.epub */,
-				FAFA8E85134A0603000291E2 /* hugo.epub */,
+				FAFA8E85134A0603000291E2 /* vhugo.epub */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				2804203B108E9BAB000629CD /* DetailView.xib */,
 				8D1107310486CEB800E47090 /* AePubReader-Info.plist */,
@@ -327,8 +330,9 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				2804203C108E9BAB000629CD /* DetailView.xib in Resources */,
-				FAFA8E86134A0603000291E2 /* hugo.epub in Resources */,
+				FAFA8E86134A0603000291E2 /* vhugo.epub in Resources */,
 				FA7F88E4134E792100EEFEA7 /* mining.epub in Resources */,
+				FAFD81491369BB3A0038F7C5 /* shak.epub in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
