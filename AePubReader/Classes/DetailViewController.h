@@ -11,9 +11,8 @@
 #import "EPub.h"
 #import "Chapter.h"
 
-@interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate, UIWebViewDelegate, ChapterProtocol> {
+@interface DetailViewController : UIViewController <UIWebViewDelegate, ChapterProtocol> {
     
-    UIPopoverController *popoverController;
     UIToolbar *toolbar;
         
 	UIWebView *webView;
@@ -51,11 +50,11 @@
 - (void) gotoPageInCurrentSpine: (int)pageIndex;
 - (void) updatePagination;
 - (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex;
-- (int) getPageCountForSpineAtIndex:(int) spineIndex;
 - (void) webViewDidFinishLoad:(UIWebView *)theWebView;
 - (void) loadEpub:(NSString*) epubName;
 
 - (void) chapterDidFinishLoad:(Chapter *)chapter;
+
 - (int) getGlobalPageCount;
 
 

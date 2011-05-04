@@ -9,13 +9,12 @@
 #import "AePubReaderAppDelegate.h"
 
 
-#import "RootViewController.h"
 #import "DetailViewController.h"
 
 
 @implementation AePubReaderAppDelegate
 
-@synthesize window, splitViewController, rootViewController, detailViewController;
+@synthesize window, detailViewController;
 
 
 #pragma mark -
@@ -25,9 +24,9 @@
     
     // Override point for customization after app launch.
     
-	// Set the split view controller as the window's root view controller and display.
-    self.window.rootViewController = self.splitViewController;
+    self.window.rootViewController = self.detailViewController;
     [self.window makeKeyAndVisible];
+    [detailViewController loadEpub:@"vhugo"];
     
     return YES;
 }
@@ -66,7 +65,6 @@
 
 
 - (void)dealloc {
-    [splitViewController release];
     [window release];
     [super dealloc];
 }

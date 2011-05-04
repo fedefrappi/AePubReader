@@ -7,28 +7,17 @@
 //
 
 #import "DetailViewController.h"
-#import "RootViewController.h"
 #import "Chapter.h"
-
-@interface DetailViewController ()
-@property (nonatomic, retain) UIPopoverController *popoverController;
-@end
-
-
 
 @implementation DetailViewController
 
-@synthesize toolbar, popoverController, webView, nextSpineButton, prevSpineButton, loadedEpub; 
+@synthesize toolbar, webView, nextSpineButton, prevSpineButton, loadedEpub; 
 @synthesize prevPageButton, nextPageButton, decTextSizeButton, incTextSizeButton;
 @synthesize currentPageLabel, pageSlider;
 
 #pragma mark -
-#pragma mark Managing the detail item
 
 - (void) loadEpub:(NSString*) epubName{
-	if (self.popoverController != nil) {
-        [self.popoverController dismissPopoverAnimated:YES];
-    }
 	currentSpineIndex = 0;
     currentPageInSpineIndex = 0;
     loadedEpub = [[EPub alloc] initWithEPubPath:[[NSBundle mainBundle] pathForResource:epubName ofType:@"epub"]];
@@ -127,7 +116,7 @@
 			[self gotoPageInCurrentSpine:--currentPageInSpineIndex];
 		} else {
 			if(currentSpineIndex!=0){
-				int targetPage = [self getPageCountForSpineAtIndex:(currentSpineIndex-1)];
+				int targetPage = [[loadedEpub.spineArray objectAtIndex:(currentSpineIndex-1)] pageCount];
 				[self loadSpine:--currentSpineIndex atPageIndex:targetPage-1];
 				
 			}
@@ -206,43 +195,11 @@
 
 - (void) updatePagination{
 	loading = YES;
-//	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];//
-//	pagesInCurrentSpineCount = (int)((float)totalWidth/webView.bounds.size.width);
 	
     totalPagesCount=0;
 	[[loadedEpub.spineArray objectAtIndex:0] setDelegate:self];
 	[[loadedEpub.spineArray objectAtIndex:0] loadChapterWithWindowSize:webView.bounds fontPercentSize:currentTextSize];
 	[currentPageLabel setText:@"?/?"];
-}
-
-- (int) getPageCountForSpineAtIndex:(int) spineIndex{
-    
-	return [[loadedEpub.spineArray objectAtIndex:spineIndex] pageCount];
-
-}
-
-#pragma mark -
-#pragma mark Split view support
-
-- (void)splitViewController: (UISplitViewController*)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController: (UIPopoverController*)pc {
-    
-    barButtonItem.title = @"Root List";
-    NSMutableArray *items = [[toolbar items] mutableCopy];
-    [items insertObject:barButtonItem atIndex:0];
-    [toolbar setItems:items animated:YES];
-    [items release];
-    self.popoverController = pc;
-}
-
-
-// Called when the view is shown again in the split view, invalidating the button and popover controller.
-- (void)splitViewController: (UISplitViewController*)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
-    
-    NSMutableArray *items = [[toolbar items] mutableCopy];
-    [items removeObjectAtIndex:0];
-    [toolbar setItems:items animated:YES];
-    [items release];
-    self.popoverController = nil;
 }
 
 
@@ -251,9 +208,10 @@
 
 // Ensure that the view controller supports rotation and that the split view can therefore show in both portrait and landscape.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return YES;
+    NSLog(@"autorotateeeee");
+	[self updatePagination];
+	return YES;
 }
-
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -307,7 +265,6 @@
 - (void)viewDidUnload {
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    self.popoverController = nil;
 }
 
 
@@ -324,7 +281,6 @@
 */
 
 - (void)dealloc {
-    [popoverController release];
     [toolbar release];
     [super dealloc];
 }
