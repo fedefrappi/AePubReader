@@ -138,11 +138,11 @@
      When a row is selected, set the detail view controller's detail item to the item associated with the selected row.
      */
     if(indexPath.row == 0){
-        detailViewController.detailItem = [NSString stringWithFormat:@"shak"];        
+        [detailViewController loadEpub:@"shak"];        
     } else if(indexPath.row == 1){
-        detailViewController.detailItem = [NSString stringWithFormat:@"mining"];        
+        [detailViewController loadEpub:@"mining"];           
     } else if(indexPath.row == 2){
-        detailViewController.detailItem = [NSString stringWithFormat:@"vhugo"];        
+        [detailViewController loadEpub:@"vhugo"];           
     }
 }
 

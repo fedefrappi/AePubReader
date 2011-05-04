@@ -15,11 +15,7 @@
     
     UIPopoverController *popoverController;
     UIToolbar *toolbar;
-    
-    NSString *detailItem;
-	
-    UILabel *titleLabel;
-	UILabel *authorLabel;
+        
 	UIWebView *webView;
 	
 	UIBarButtonItem* prevSpineButton;
@@ -30,6 +26,9 @@
 	
 	UIBarButtonItem* decTextSizeButton;
 	UIBarButtonItem* incTextSizeButton;
+    
+    UISlider* pageSlider;
+    UILabel* currentPageLabel;
 	
 	EPub* loadedEpub;
 	int currentSpineIndex;
@@ -37,6 +36,8 @@
 	int pagesInCurrentSpineCount;
 	int currentTextSize;
 	int totalPagesCount;
+    
+    BOOL loading;
 }
 - (IBAction) nextButtonClicked:(id)sender;
 - (IBAction) prevButtonClicked:(id)sender;
@@ -44,6 +45,8 @@
 - (IBAction) prevPageClicked:(id)sender;
 - (IBAction) increaseTextSizeClicked:(id)sender;
 - (IBAction) decreaseTextSizeClicked:(id)sender;
+- (IBAction) slidingStarted:(id)sender;
+- (IBAction) slidingEnded:(id)sender;
 
 - (void) gotoPageInCurrentSpine: (int)pageIndex;
 - (void) updatePagination;
@@ -53,14 +56,13 @@
 - (void) loadEpub:(NSString*) epubName;
 
 - (void) chapterDidFinishLoad:(Chapter *)chapter;
+- (int) getGlobalPageCount;
+
+
+@property (nonatomic, retain) EPub* loadedEpub;
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 
-@property (nonatomic, retain) NSString* detailItem;
-@property (nonatomic, retain) EPub* loadedEpub;
-
-@property (nonatomic, retain) IBOutlet UILabel *titleLabel;
-@property (nonatomic, retain) IBOutlet UILabel *authorLabel;
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *prevSpineButton;
@@ -72,6 +74,8 @@
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *decTextSizeButton;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *incTextSizeButton;
 
+@property (nonatomic, retain) IBOutlet UISlider *pageSlider;
+@property (nonatomic, retain) IBOutlet UILabel *currentPageLabel;
 
 
 @end

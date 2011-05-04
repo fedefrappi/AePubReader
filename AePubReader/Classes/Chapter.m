@@ -53,7 +53,6 @@
 	NSString *insertRule2 = [NSString stringWithFormat:@"addCSSRule('p', 'text-align: justify;')"];
 	NSString *setTextSizeRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')",fontPercentSize];
     
-    [webView stringByEvaluatingJavaScriptFromString:setTextSizeRule];
 	
 	[webView stringByEvaluatingJavaScriptFromString:varMySheet];
 	
@@ -62,11 +61,13 @@
 	[webView stringByEvaluatingJavaScriptFromString:insertRule1];
 	
 	[webView stringByEvaluatingJavaScriptFromString:insertRule2];
-	    
+	
+    [webView stringByEvaluatingJavaScriptFromString:setTextSizeRule];
+    
 	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];
 	pageCount = (int)((float)totalWidth/webView.bounds.size.width);
 	
-    NSLog(@"Chapter %d -> %d %f", chapterIndex, totalWidth, webView.bounds.size.width);
+    NSLog(@"Chapter %d: %@ -> %d pages", chapterIndex, title, pageCount);
     
     [webView dealloc];
     [delegate chapterDidFinishLoad:self];

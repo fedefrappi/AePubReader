@@ -18,25 +18,17 @@
 
 @implementation DetailViewController
 
-@synthesize toolbar, popoverController, detailItem, titleLabel, authorLabel, webView, nextSpineButton, prevSpineButton, loadedEpub; 
+@synthesize toolbar, popoverController, webView, nextSpineButton, prevSpineButton, loadedEpub; 
 @synthesize prevPageButton, nextPageButton, decTextSizeButton, incTextSizeButton;
+@synthesize currentPageLabel, pageSlider;
 
 #pragma mark -
 #pragma mark Managing the detail item
 
-/*
- When setting the detail item, update the view and dismiss the popover controller if it's showing.
- */
-- (void)setDetailItem:(NSString*)newDetailItem {
-	detailItem = newDetailItem;
-	[self loadEpub:detailItem];
-	
-    if (self.popoverController != nil) {
-        [self.popoverController dismissPopoverAnimated:YES];
-    }        
-}
-
 - (void) loadEpub:(NSString*) epubName{
+	if (self.popoverController != nil) {
+        [self.popoverController dismissPopoverAnimated:YES];
+    }
 	currentSpineIndex = 0;
     currentPageInSpineIndex = 0;
     loadedEpub = [[EPub alloc] initWithEPubPath:[[NSBundle mainBundle] pathForResource:epubName ofType:@"epub"]];
@@ -52,8 +44,21 @@
 	if(chapter.chapterIndex + 1 < [loadedEpub.spineArray count]){
 		[[loadedEpub.spineArray objectAtIndex:chapter.chapterIndex+1] setDelegate:self];
 		[[loadedEpub.spineArray objectAtIndex:chapter.chapterIndex+1] loadChapterWithWindowSize:webView.bounds fontPercentSize:currentTextSize];
-
+		[currentPageLabel setText:[NSString stringWithFormat:@"?/%d", totalPagesCount]];
+	} else {
+		[currentPageLabel setText:[NSString stringWithFormat:@"%d/%d",[self getGlobalPageCount], totalPagesCount]];
+		[pageSlider setValue:(float)100*(float)[self getGlobalPageCount]/(float)totalPagesCount animated:YES];
+		loading = NO;
 	}
+}
+
+- (int) getGlobalPageCount{
+	int pageCount = 0;
+	for(int i=0; i<currentSpineIndex; i++){
+		pageCount+= [[loadedEpub.spineArray objectAtIndex:i] pageCount]; 
+	}
+	pageCount+=currentPageInSpineIndex+1;
+	return pageCount;
 }
 
 - (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex{
@@ -63,73 +68,105 @@
 	NSURL* url = [NSURL fileURLWithPath:[[loadedEpub.spineArray objectAtIndex:spineIndex] spinePath]];
 	[webView loadRequest:[NSURLRequest requestWithURL:url]];
 	currentPageInSpineIndex = pageIndex;
-	
+	currentSpineIndex = spineIndex;
+	if(!loading){
+		[currentPageLabel setText:[NSString stringWithFormat:@"%d/%d",[self getGlobalPageCount], totalPagesCount]];
+		[pageSlider setValue:(float)100*(float)[self getGlobalPageCount]/(float)totalPagesCount animated:YES];	
+	}
 }
 
 - (void) gotoPageInCurrentSpine:(int)pageIndex{
+	if(pageIndex>=pagesInCurrentSpineCount){
+		pageIndex = pagesInCurrentSpineCount - 1;
+		currentPageInSpineIndex = pagesInCurrentSpineCount - 1;	
+	}
+	
 	float pageOffset = pageIndex*webView.bounds.size.width;
 	NSString* goToOffsetFunc = [NSString stringWithFormat:@" function pageScroll(xOffset){ window.scroll(xOffset,0); } "];
 	NSString* goTo =[NSString stringWithFormat:@"pageScroll(%f)", pageOffset];
 	
 	[webView stringByEvaluatingJavaScriptFromString:goToOffsetFunc];
 	[webView stringByEvaluatingJavaScriptFromString:goTo];	
+	
+	if(!loading){
+		[currentPageLabel setText:[NSString stringWithFormat:@"%d/%d",[self getGlobalPageCount], totalPagesCount]];
+		[pageSlider setValue:(float)100*(float)[self getGlobalPageCount]/(float)totalPagesCount animated:YES];	
+	}
+	
 }
 
 - (IBAction)nextButtonClicked:(id)sender {
-	if(currentSpineIndex+1<[loadedEpub.spineArray count]){
-		[self loadSpine:++currentSpineIndex atPageIndex:0];
+	if(!loading){
+		if(currentSpineIndex+1<[loadedEpub.spineArray count]){
+			[self loadSpine:++currentSpineIndex atPageIndex:0];
+		}	
 	}
 }
 
 - (IBAction)prevButtonClicked:(id)sender {
-	if(currentSpineIndex-1>=0){
-		[self loadSpine:--currentSpineIndex atPageIndex:0];
+	if(!loading){
+		if(currentSpineIndex-1>=0){
+			[self loadSpine:--currentSpineIndex atPageIndex:0];
+		}	
 	}
-	
 }
 
 - (IBAction)nextPageClicked:(id)sender {
-	if(currentPageInSpineIndex+1<pagesInCurrentSpineCount){
-		[self gotoPageInCurrentSpine:++currentPageInSpineIndex];
-	} else {
-		[self nextButtonClicked:self];
+	if(!loading){
+		if(currentPageInSpineIndex+1<pagesInCurrentSpineCount){
+			[self gotoPageInCurrentSpine:++currentPageInSpineIndex];
+		} else {
+			[self nextButtonClicked:self];
+		}		
 	}
 }
 
 - (IBAction)prevPageClicked:(id)sender {
-	if(currentPageInSpineIndex-1>=0){
-		[self gotoPageInCurrentSpine:--currentPageInSpineIndex];
-	} else {
-		if(currentSpineIndex!=0){
-			int targetPage = [self getPageCountForSpineAtIndex:(currentSpineIndex-1)];
-			[self loadSpine:--currentSpineIndex atPageIndex:targetPage-1];
-
-		}
-	}	
+	if (!loading) {
+		if(currentPageInSpineIndex-1>=0){
+			[self gotoPageInCurrentSpine:--currentPageInSpineIndex];
+		} else {
+			if(currentSpineIndex!=0){
+				int targetPage = [self getPageCountForSpineAtIndex:(currentSpineIndex-1)];
+				[self loadSpine:--currentSpineIndex atPageIndex:targetPage-1];
+				
+			}
+		}		
+	}
 }
 
 
 - (IBAction) increaseTextSizeClicked:(id)sender{
-	currentTextSize = currentTextSize+25<=200?currentTextSize+25:currentTextSize;
-	
-	NSString *insertRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')", currentTextSize];
-	
-	[webView stringByEvaluatingJavaScriptFromString:insertRule];
-	
-	[self updatePagination];
-
-	
+	if(!loading){
+		currentTextSize = currentTextSize+25<=200?currentTextSize+25:currentTextSize;
+		[self updatePagination];	
+	}
 }
 - (IBAction) decreaseTextSizeClicked:(id)sender{
-	currentTextSize = currentTextSize-25>=50?currentTextSize-25:currentTextSize;
+	if(!loading){
+		currentTextSize = currentTextSize-25>=50?currentTextSize-25:currentTextSize;	
+		[self updatePagination];	
+	}
+}
 
-	NSString *insertRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')", currentTextSize];
-	
-	[webView stringByEvaluatingJavaScriptFromString:insertRule];
-	
-	[self updatePagination];
+- (IBAction) slidingStarted:(id)sender{
+	[currentPageLabel setText:[NSString stringWithFormat:@"%d/%d", (int)(pageSlider.value*(float)totalPagesCount/(float)100), totalPagesCount]];
+}
 
-	
+- (IBAction) slidingEnded:(id)sender{
+	int targetPage = (int)(pageSlider.value*(float)totalPagesCount/(float)100);
+	int pageSum = 0;
+	int chapterIndex = 0;
+	int pageIndex = 0;
+	for(chapterIndex=0; chapterIndex<[loadedEpub.spineArray count]; chapterIndex++){
+		pageSum+=[[loadedEpub.spineArray objectAtIndex:chapterIndex] pageCount];
+		NSLog(@"Chapter %d, targetPage: %d, pageSum: %d, pageIndex: %d", chapterIndex, targetPage, pageSum, (pageSum-targetPage));
+		if(pageSum>=targetPage){
+			pageIndex = [[loadedEpub.spineArray objectAtIndex:chapterIndex] pageCount] - 1 - pageSum + targetPage;
+			break;
+		}
+	}
+	[self loadSpine:chapterIndex atPageIndex:pageIndex];
 }
 
 
@@ -145,9 +182,7 @@
 	"mySheet.insertRule(selector + '{' + newRule + ';}', ruleIndex);"   // For Firefox, Chrome, etc.
 	"}"
 	"}";
-	
-	NSLog(@"w:%f h:%f", webView.bounds.size.width, webView.bounds.size.height);
-	
+		
 	NSString *insertRule1 = [NSString stringWithFormat:@"addCSSRule('html', 'padding: 0px; height: %fpx; -webkit-column-gap: 0px; -webkit-column-width: %fpx;')", webView.frame.size.height, webView.frame.size.width];
 	NSString *insertRule2 = [NSString stringWithFormat:@"addCSSRule('p', 'text-align: justify;')"];
 	NSString *setTextSizeRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')", currentTextSize];
@@ -170,19 +205,14 @@
 }
 
 - (void) updatePagination{
-	
-	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];
-	pagesInCurrentSpineCount = (int)((float)totalWidth/webView.bounds.size.width);
+	loading = YES;
+//	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];//
+//	pagesInCurrentSpineCount = (int)((float)totalWidth/webView.bounds.size.width);
 	
     totalPagesCount=0;
-    /*
-	for (Chapter* chapter in loadedEpub.spineArray) {
-        [chapter setDelegate:self];
-        [chapter loadChapterWithWindowSize:webView.bounds fontPercentSize:currentTextSize];
-    }
-	 */
 	[[loadedEpub.spineArray objectAtIndex:0] setDelegate:self];
 	[[loadedEpub.spineArray objectAtIndex:0] loadChapterWithWindowSize:webView.bounds fontPercentSize:currentTextSize];
+	[currentPageLabel setText:@"?/?"];
 }
 
 - (int) getPageCountForSpineAtIndex:(int) spineIndex{
@@ -296,9 +326,6 @@
 - (void)dealloc {
     [popoverController release];
     [toolbar release];
-    
-    [detailItem release];
-    [titleLabel release];
     [super dealloc];
 }
 

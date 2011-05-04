@@ -10,7 +10,6 @@
 #import "ZipArchive.h"
 #import "Chapter.h"
 
-
 @implementation EPub
 
 @synthesize title, author, spineArray;
@@ -95,16 +94,32 @@
 - (void) parseOPF:(NSString*)opfPath{
 	CXMLDocument* opfFile = [[[CXMLDocument alloc] initWithContentsOfURL:[NSURL fileURLWithPath:opfPath] options:0 error:nil] autorelease];
 	NSArray* itemsArray = [opfFile nodesForXPath:@"//opf:item" namespaceMappings:[NSDictionary dictionaryWithObject:@"http://www.idpf.org/2007/opf" forKey:@"opf"] error:nil];
-	NSLog(@"itemsArray size: %d", [itemsArray count]);
-	NSMutableDictionary* itemDictionary = [[NSMutableDictionary alloc] init];
+//	NSLog(@"itemsArray size: %d", [itemsArray count]);
+    
+    NSString* ncxFileName;
+	
+    NSMutableDictionary* itemDictionary = [[NSMutableDictionary alloc] init];
 	for (CXMLElement* element in itemsArray) {
-		[itemDictionary setObject:[[element attributeForName:@"href"] stringValue] forKey:[[element attributeForName:@"id"] stringValue]];
-	//	NSLog(@"%@ : %@", [[element attributeForName:@"id"] stringValue], [[element attributeForName:@"href"] stringValue]);
+		[itemDictionary setValue:[[element attributeForName:@"href"] stringValue] forKey:[[element attributeForName:@"id"] stringValue]];
+        if([[[element attributeForName:@"media-type"] stringValue] isEqualToString:@"application/x-dtbncx+xml"]){
+            ncxFileName = [[element attributeForName:@"href"] stringValue];
+            NSLog(@"%@ : %@", [[element attributeForName:@"id"] stringValue], [[element attributeForName:@"href"] stringValue]);
+        }
 	}
 	
-	int lastSlash = [opfPath rangeOfString:@"/" options:NSBackwardsSearch].location;
-	
+    int lastSlash = [opfPath rangeOfString:@"/" options:NSBackwardsSearch].location;
 	NSString* ebookBasePath = [opfPath substringToIndex:(lastSlash +1)];
+    CXMLDocument* ncxToc = [[[CXMLDocument alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@%@", ebookBasePath, ncxFileName]] options:0 error:nil] autorelease];
+    NSMutableDictionary* titleDictionary = [[NSMutableDictionary alloc] init];
+    for (CXMLElement* element in itemsArray) {
+        NSString* href = [[element attributeForName:@"href"] stringValue];
+        NSString* xpath = [NSString stringWithFormat:@"//ncx:content[@src='%@']/../ncx:navLabel/ncx:text", href];
+        NSArray* navPoints = [ncxToc nodesForXPath:xpath namespaceMappings:[NSDictionary dictionaryWithObject:@"http://www.daisy.org/z3986/2005/ncx/" forKey:@"ncx"] error:nil];
+        if([navPoints count]!=0){
+            CXMLElement* titleElement = [navPoints objectAtIndex:0];
+           [titleDictionary setValue:[titleElement stringValue] forKey:href];
+        }
+    }
 
 	
 	NSArray* itemRefsArray = [opfFile nodesForXPath:@"//opf:itemref" namespaceMappings:[NSDictionary dictionaryWithObject:@"http://www.idpf.org/2007/opf" forKey:@"opf"] error:nil];
@@ -112,8 +127,10 @@
 	NSMutableArray* tmpArray = [[NSMutableArray alloc] init];
     int count = 0;
 	for (CXMLElement* element in itemRefsArray) {
-        Chapter* tmpChapter = [[[Chapter alloc] initWithPath:[NSString stringWithFormat:@"%@%@", ebookBasePath, [itemDictionary objectForKey:[[element attributeForName:@"idref"] stringValue]]]
-                                                title:[NSString stringWithFormat:@"%d", count] 
+        NSString* chapHref = [itemDictionary valueForKey:[[element attributeForName:@"idref"] stringValue]];
+
+        Chapter* tmpChapter = [[[Chapter alloc] initWithPath:[NSString stringWithFormat:@"%@%@", ebookBasePath, chapHref]
+                                                       title:[titleDictionary valueForKey:chapHref] 
                                                 chapterIndex:count++] retain];
 		[tmpArray addObject:tmpChapter];
 	}
