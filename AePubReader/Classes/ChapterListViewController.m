@@ -11,6 +11,8 @@
 
 @implementation ChapterListViewController
 
+@synthesize epubViewController;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -83,16 +85,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [epubViewController.loadedEpub.spineArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -104,7 +103,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Configure the cell...
+    cell.textLabel.text = [[epubViewController.loadedEpub.spineArray objectAtIndex:[indexPath row]] title];
     
     return cell;
 }
@@ -160,6 +159,10 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [epubViewController loadSpine:[indexPath row] atPageIndex:0];
+    [[epubViewController chaptersPopOver] dismissPopoverAnimated:YES];
 }
 
 @end

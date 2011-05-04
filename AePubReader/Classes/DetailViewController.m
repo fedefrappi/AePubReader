@@ -7,12 +7,13 @@
 //
 
 #import "DetailViewController.h"
+#import "ChapterListViewController.h"
 #import "Chapter.h"
 
 @implementation DetailViewController
 
-@synthesize toolbar, webView, nextSpineButton, prevSpineButton, loadedEpub; 
-@synthesize prevPageButton, nextPageButton, decTextSizeButton, incTextSizeButton;
+@synthesize loadedEpub, chaptersPopOver, toolbar, webView, nextSpineButton, prevSpineButton; 
+@synthesize chapterListButton, prevPageButton, nextPageButton, decTextSizeButton, incTextSizeButton;
 @synthesize currentPageLabel, pageSlider;
 
 #pragma mark -
@@ -156,6 +157,20 @@
 		}
 	}
 	[self loadSpine:chapterIndex atPageIndex:pageIndex];
+}
+
+- (IBAction) showChapterIndex:(id)sender{
+	if(chaptersPopover==nil){
+		ChapterListViewController* chapterListView = [[ChapterListViewController alloc] init];
+		[chapterListView setEpubViewController:self];
+		chaptersPopover = [[UIPopoverController alloc] initWithContentViewController:chapterListView];
+		[chaptersPopover setPopoverContentSize:CGSizeMake(300, 500)];
+	}
+	if ([chaptersPopover isPopoverVisible]) {
+		[chaptersPopover dismissPopoverAnimated:YES];
+	}else{
+		[chaptersPopover presentPopoverFromBarButtonItem:chapterListButton permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];		
+	}
 }
 
 

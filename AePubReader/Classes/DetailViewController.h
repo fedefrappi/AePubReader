@@ -16,6 +16,8 @@
     UIToolbar *toolbar;
         
 	UIWebView *webView;
+    
+    UIBarButtonItem* chapterListButton;
 	
 	UIBarButtonItem* prevSpineButton;
 	UIBarButtonItem* nextSpineButton;
@@ -37,7 +39,11 @@
 	int totalPagesCount;
     
     BOOL loading;
+    
+    UIPopoverController* chaptersPopover;
 }
+
+- (IBAction) showChapterIndex:(id)sender;
 - (IBAction) nextButtonClicked:(id)sender;
 - (IBAction) prevButtonClicked:(id)sender;
 - (IBAction) nextPageClicked:(id)sender;
@@ -57,12 +63,14 @@
 
 - (int) getGlobalPageCount;
 
-
 @property (nonatomic, retain) EPub* loadedEpub;
+@property (nonatomic, retain) UIPopoverController* chaptersPopOver;
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
+
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *chapterListButton;
 
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *prevSpineButton;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *nextSpineButton;

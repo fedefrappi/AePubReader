@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DetailViewController.h"
 
 @interface ChapterListViewController : UITableViewController {
-    
+    DetailViewController* epubViewController;
 }
+
+@property(nonatomic, retain) DetailViewController* epubViewController;
 
 @end
