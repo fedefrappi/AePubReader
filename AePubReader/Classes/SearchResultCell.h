@@ -10,7 +10,10 @@
 
 
 @interface SearchResultCell : UITableViewCell {
-    
+    UILabel* foundTextLabel;
+    UILabel* positionInfoLabel;
 }
+
+@property (nonatomic, retain) IBOutlet UILabel *foundTextLabel, *positionInfoLabel;
 
 @end

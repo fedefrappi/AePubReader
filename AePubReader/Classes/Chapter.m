@@ -7,19 +7,29 @@
 //
 
 #import "Chapter.h"
-
+#import "CSSSelector.h"
 
 @implementation Chapter 
 
-@synthesize delegate, chapterIndex, title, pageCount, spinePath;
+@synthesize delegate, chapterIndex, title, pageCount, spinePath, text;
 
 - (id) initWithPath:(NSString*)theSpinePath title:(NSString*)theTitle chapterIndex:(int) theIndex{
     if((self=[super init])){
         spinePath = [theSpinePath retain];
         title = [theTitle retain];
         chapterIndex = theIndex;
+   //     parser = [[URLParser alloc] initWithCallbackDelegate:self];
+   //     [parser performSelector:@selector(gotBodyElement:) forElementsMatching:@"head"];
+   //     [parser parseURL:[NSURL fileURLWithPath:theSpinePath]];
+    
+        DocumentRoot* doc = [Element parseHTML:[[NSString alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL fileURLWithPath:theSpinePath]] encoding:NSUTF8StringEncoding]];
+        text = [[[doc elementWithCSSSelector:[[CSSSelector alloc] initWithString:@"body"]] contentsText] retain];
     }
     return self;
+}
+
+- (void) gotBodyElement:(Element*)element{
+//    NSLog(@"%@", [element contentsText]);
 }
 
 - (void) loadChapterWithWindowSize:(CGRect)theWindowSize fontPercentSize:(int) theFontPercentSize{

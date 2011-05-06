@@ -102,12 +102,17 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-    
+    cell.textLabel.numberOfLines = 2;
+    cell.textLabel.lineBreakMode = UILineBreakModeMiddleTruncation;
+    cell.textLabel.adjustsFontSizeToFitWidth = YES;
     cell.textLabel.text = [[epubViewController.loadedEpub.spineArray objectAtIndex:[indexPath row]] title];
-    
     return cell;
 }
-
+/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 70;
+}
+*/
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -162,7 +167,6 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [epubViewController loadSpine:[indexPath row] atPageIndex:0];
-    [[epubViewController chaptersPopOver] dismissPopoverAnimated:YES];
 }
 
 @end

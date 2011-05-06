@@ -26,7 +26,7 @@
     
     self.window.rootViewController = self.detailViewController;
     [self.window makeKeyAndVisible];
-    [detailViewController loadEpub:@"mining"];
+    [detailViewController loadEpub:@"vhugo"];
     
     return YES;
 }

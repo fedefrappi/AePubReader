@@ -11,4 +11,15 @@
 
 @implementation SearchResult
 
+@synthesize pageIndex, chapterIndex, neighboringText;
+
+- initWithChapterIndex:(int)theChapterIndex pageIndex:(int)thePageIndex neighboringText:(NSString*)theNeighboringText{
+    if((self=[super init])){
+        chapterIndex = theChapterIndex;
+        pageIndex = thePageIndex;
+        neighboringText = [theNeighboringText retain];
+    }
+    return self;
+}
+
 @end

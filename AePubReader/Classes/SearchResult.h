@@ -10,7 +10,14 @@
 
 
 @interface SearchResult : NSObject {
-    
+    int chapterIndex;
+    int pageIndex;
+    NSString* neighboringText;
 }
+
+- initWithChapterIndex:(int)theChapterIndex pageIndex:(int)thePageIndex neighboringText:(NSString*)theNeighboringText;
+
+@property int chapterIndex, pageIndex;
+@property (nonatomic, retain) NSString* neighboringText;
 
 @end

@@ -8,11 +8,12 @@
 
 #import "DetailViewController.h"
 #import "ChapterListViewController.h"
+#import "SearchResultsViewController.h"
 #import "Chapter.h"
 
 @implementation DetailViewController
 
-@synthesize loadedEpub, chaptersPopOver, toolbar, webView, nextSpineButton, prevSpineButton; 
+@synthesize loadedEpub, toolbar, webView, nextSpineButton, prevSpineButton; 
 @synthesize chapterListButton, prevPageButton, nextPageButton, decTextSizeButton, incTextSizeButton;
 @synthesize currentPageLabel, pageSlider;
 
@@ -22,15 +23,16 @@
 	currentSpineIndex = 0;
     currentPageInSpineIndex = 0;
     loadedEpub = [[EPub alloc] initWithEPubPath:[[NSBundle mainBundle] pathForResource:epubName ofType:@"epub"]];
-    [self updatePagination];
+    epubLoaded = YES;
+	[self updatePagination];
     
 }
 
 - (void) chapterDidFinishLoad:(Chapter *)chapter{
     totalPagesCount+=chapter.pageCount;
-    if(chapter.chapterIndex==currentSpineIndex){
-        [self loadSpine:currentSpineIndex atPageIndex:currentPageInSpineIndex];
-    }
+//   if(chapter.chapterIndex==currentSpineIndex){
+//      [self loadSpine:currentSpineIndex atPageIndex:currentPageInSpineIndex];
+//   }
 	if(chapter.chapterIndex + 1 < [loadedEpub.spineArray count]){
 		[[loadedEpub.spineArray objectAtIndex:chapter.chapterIndex+1] setDelegate:self];
 		[[loadedEpub.spineArray objectAtIndex:chapter.chapterIndex+1] loadChapterWithWindowSize:webView.bounds fontPercentSize:currentTextSize];
@@ -53,8 +55,8 @@
 
 - (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex{
 	
-    NSLog(@"%d", [[loadedEpub.spineArray objectAtIndex:spineIndex] pageCount]);
-	
+//    NSLog(@"%d", [[loadedEpub.spineArray objectAtIndex:spineIndex] pageCount]);
+	[chaptersPopover dismissPopoverAnimated:YES];
 	NSURL* url = [NSURL fileURLWithPath:[[loadedEpub.spineArray objectAtIndex:spineIndex] spinePath]];
 	[webView loadRequest:[NSURLRequest requestWithURL:url]];
 	currentPageInSpineIndex = pageIndex;
@@ -128,14 +130,26 @@
 
 - (IBAction) increaseTextSizeClicked:(id)sender{
 	if(!loading){
-		currentTextSize = currentTextSize+25<=200?currentTextSize+25:currentTextSize;
-		[self updatePagination];	
+		if(currentTextSize+25<=200){
+			currentTextSize+=25;
+			[self updatePagination];
+			if(currentTextSize == 200){
+				[incTextSizeButton setEnabled:NO];
+			}
+			[decTextSizeButton setEnabled:YES];
+		}
 	}
 }
 - (IBAction) decreaseTextSizeClicked:(id)sender{
 	if(!loading){
-		currentTextSize = currentTextSize-25>=50?currentTextSize-25:currentTextSize;	
-		[self updatePagination];	
+		if(currentTextSize-25>=50){
+			currentTextSize-=25;
+			[self updatePagination];
+			if(currentTextSize==50){
+				[decTextSizeButton setEnabled:NO];
+			}
+			[incTextSizeButton setEnabled:YES];
+		}
 	}
 }
 
@@ -161,10 +175,10 @@
 
 - (IBAction) showChapterIndex:(id)sender{
 	if(chaptersPopover==nil){
-		ChapterListViewController* chapterListView = [[ChapterListViewController alloc] init];
+		ChapterListViewController* chapterListView = [[ChapterListViewController alloc] initWithNibName:@"ChapterListViewController" bundle:[NSBundle mainBundle]];
 		[chapterListView setEpubViewController:self];
 		chaptersPopover = [[UIPopoverController alloc] initWithContentViewController:chapterListView];
-		[chaptersPopover setPopoverContentSize:CGSizeMake(300, 500)];
+		[chaptersPopover setPopoverContentSize:CGSizeMake(400, 600)];
 	}
 	if ([chaptersPopover isPopoverVisible]) {
 		[chaptersPopover dismissPopoverAnimated:YES];
@@ -194,12 +208,12 @@
 	[webView stringByEvaluatingJavaScriptFromString:varMySheet];
 	
 	[webView stringByEvaluatingJavaScriptFromString:addCSSRule];
-	
-	[webView stringByEvaluatingJavaScriptFromString:setTextSizeRule];
-	
+		
 	[webView stringByEvaluatingJavaScriptFromString:insertRule1];
 	
 	[webView stringByEvaluatingJavaScriptFromString:insertRule2];
+	
+	[webView stringByEvaluatingJavaScriptFromString:setTextSizeRule];
 	
 	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];
 	pagesInCurrentSpineCount = (int)((float)totalWidth/webView.bounds.size.width);
@@ -209,12 +223,27 @@
 }
 
 - (void) updatePagination{
-	loading = YES;
-	
-    totalPagesCount=0;
-	[[loadedEpub.spineArray objectAtIndex:0] setDelegate:self];
-	[[loadedEpub.spineArray objectAtIndex:0] loadChapterWithWindowSize:webView.bounds fontPercentSize:currentTextSize];
-	[currentPageLabel setText:@"?/?"];
+	if(epubLoaded){
+		loading = YES;
+		totalPagesCount=0;
+		[self loadSpine:currentSpineIndex atPageIndex:currentPageInSpineIndex];
+		[[loadedEpub.spineArray objectAtIndex:0] setDelegate:self];
+		[[loadedEpub.spineArray objectAtIndex:0] loadChapterWithWindowSize:webView.bounds fontPercentSize:currentTextSize];
+		[currentPageLabel setText:@"?/?"];		
+	}
+}
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+	if(searchResultsPopover==nil){
+		searchResultsPopover = [[UIPopoverController alloc] initWithContentViewController:searchResViewController];
+		[searchResultsPopover setPopoverContentSize:CGSizeMake(400, 600)];
+	}
+	if (![searchResultsPopover isPopoverVisible]) {
+			[searchResultsPopover presentPopoverFromBarButtonItem:incTextSizeButton permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];		
+	}
+	NSLog(@"Searching for %@", [searchBar text]);
+	[searchResViewController searchString:[searchBar text]];
 }
 
 
@@ -254,7 +283,16 @@
 	
 	[webView addGestureRecognizer:rightSwipeRecognizer];
 	[webView addGestureRecognizer:leftSwipeRecognizer];
+	
+	[pageSlider setThumbImage:[UIImage imageNamed:@"slider_ball.png"] forState:UIControlStateNormal];
+	[pageSlider setMinimumTrackImage:[[UIImage imageNamed:@"orangeSlide.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:0] forState:UIControlStateNormal];
+	[pageSlider setMaximumTrackImage:[[UIImage imageNamed:@"yellowSlide.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:0] forState:UIControlStateNormal];
+
+	epubLoaded=NO;
+	searchResViewController = [[SearchResultsViewController alloc] initWithNibName:@"SearchResultsViewController" bundle:[NSBundle mainBundle]];
+	searchResViewController.epubViewController = self;
 }
+
 
 /*
 - (void)viewWillAppear:(BOOL)animated {

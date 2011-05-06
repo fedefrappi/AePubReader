@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "URLParser.h"
 @class Chapter;
 
 @protocol ChapterProtocol <NSObject>
@@ -22,11 +23,12 @@
     int chapterIndex;
     CGSize windowSize;
     int fontPercentSize;
+    NSString* text;
 }
 
 @property (nonatomic, assign) id delegate;
 @property (nonatomic, readonly) int pageCount, chapterIndex;
-@property (nonatomic, readonly) NSString *spinePath, *title;
+@property (nonatomic, readonly) NSString *spinePath, *title, *text;
 
 - (id) initWithPath:(NSString*)theSpinePath title:(NSString*)theTitle chapterIndex:(int) theIndex;
 

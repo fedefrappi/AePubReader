@@ -11,7 +11,9 @@
 #import "EPub.h"
 #import "Chapter.h"
 
-@interface DetailViewController : UIViewController <UIWebViewDelegate, ChapterProtocol> {
+@class SearchResultsViewController;
+
+@interface DetailViewController : UIViewController <UIWebViewDelegate, ChapterProtocol, UISearchBarDelegate> {
     
     UIToolbar *toolbar;
         
@@ -38,9 +40,13 @@
 	int currentTextSize;
 	int totalPagesCount;
     
+    BOOL epubLoaded;
     BOOL loading;
     
     UIPopoverController* chaptersPopover;
+    UIPopoverController* searchResultsPopover;
+
+    SearchResultsViewController* searchResViewController;
 }
 
 - (IBAction) showChapterIndex:(id)sender;
@@ -63,8 +69,9 @@
 
 - (int) getGlobalPageCount;
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
+
 @property (nonatomic, retain) EPub* loadedEpub;
-@property (nonatomic, retain) UIPopoverController* chaptersPopOver;
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 

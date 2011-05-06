@@ -52,16 +52,15 @@
 						<int key="NSvFlags">290</int>
 						<object class="NSMutableArray" key="NSSubviews">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUISearchBar" id="752674864">
+							<object class="IBUISearchBar" id="623591529">
 								<reference key="NSNextResponder" ref="410698538"/>
 								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{519, 0}, {237, 44}}</string>
 								<reference key="NSSuperview" ref="410698538"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="423201554"/>
 								<int key="IBUIContentMode">3</int>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBBarStyle">1</int>
+								<string key="IBText"/>
 								<object class="IBUITextInputTraits" key="IBTextInputTraits">
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
@@ -70,21 +69,20 @@
 						</object>
 						<string key="NSFrameSize">{768, 44}</string>
 						<reference key="NSSuperview" ref="647120888"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="752674864"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIBarStyle">1</int>
 						<object class="NSMutableArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIBarButtonItem" id="617936733">
+							<object class="IBUIBarButtonItem" id="707648661">
 								<string key="IBUITitle">Index</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="410698538"/>
 							</object>
-							<object class="IBUIBarButtonItem" id="428207435">
+							<object class="IBUIBarButtonItem" id="328417581">
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<reference key="IBUIToolbar" ref="410698538"/>
 								<int key="IBUISystemItemIdentifier">5</int>
@@ -135,9 +133,9 @@
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="410698538"/>
 							</object>
-							<object class="IBUIBarButtonItem" id="381686166">
+							<object class="IBUIBarButtonItem" id="461901006">
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<reference key="IBUICustomView" ref="752674864"/>
+								<reference key="IBUICustomView" ref="623591529"/>
 								<reference key="IBUIToolbar" ref="410698538"/>
 							</object>
 						</object>
@@ -147,7 +145,6 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{20, 67}, {728, 858}}</string>
 						<reference key="NSSuperview" ref="647120888"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="339016764"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -163,7 +160,6 @@
 						<int key="NSvFlags">266</int>
 						<string key="NSFrame">{{18, 962}, {732, 23}}</string>
 						<reference key="NSSuperview" ref="647120888"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -175,9 +171,8 @@
 					<object class="IBUILabel" id="339016764">
 						<reference key="NSNextResponder" ref="647120888"/>
 						<int key="NSvFlags">271</int>
-						<string key="NSFrame">{{363, 933}, {42, 21}}</string>
+						<string key="NSFrame">{{334, 933}, {100, 21}}</string>
 						<reference key="NSSuperview" ref="647120888"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="950245988"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -202,7 +197,6 @@
 				</object>
 				<string key="NSFrame">{{0, 20}, {768, 1004}}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="410698538"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -385,17 +379,25 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">chapterListButton</string>
 						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="617936733"/>
+						<reference key="destination" ref="707648661"/>
 					</object>
 					<int key="connectionID">112</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">showChapterIndex:</string>
-						<reference key="source" ref="617936733"/>
+						<reference key="source" ref="707648661"/>
 						<reference key="destination" ref="841351856"/>
 					</object>
 					<int key="connectionID">113</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="623591529"/>
+						<reference key="destination" ref="841351856"/>
+					</object>
+					<int key="connectionID">126</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -425,8 +427,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="423201554"/>
 							<reference ref="950245988"/>
-							<reference ref="339016764"/>
 							<reference ref="410698538"/>
+							<reference ref="339016764"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -443,9 +445,9 @@
 							<reference ref="448919007"/>
 							<reference ref="386136539"/>
 							<reference ref="534207354"/>
-							<reference ref="617936733"/>
-							<reference ref="428207435"/>
-							<reference ref="381686166"/>
+							<reference ref="707648661"/>
+							<reference ref="328417581"/>
+							<reference ref="461901006"/>
 						</object>
 						<reference key="parent" ref="647120888"/>
 					</object>
@@ -506,27 +508,27 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">103</int>
-						<reference key="object" ref="617936733"/>
+						<reference key="object" ref="707648661"/>
 						<reference key="parent" ref="410698538"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">104</int>
-						<reference key="object" ref="428207435"/>
+						<reference key="object" ref="328417581"/>
 						<reference key="parent" ref="410698538"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">110</int>
-						<reference key="object" ref="381686166"/>
+						<int key="objectID">125</int>
+						<reference key="object" ref="461901006"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="752674864"/>
+							<reference ref="623591529"/>
 						</object>
 						<reference key="parent" ref="410698538"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">109</int>
-						<reference key="object" ref="752674864"/>
-						<reference key="parent" ref="381686166"/>
+						<int key="objectID">124</int>
+						<reference key="object" ref="623591529"/>
+						<reference key="parent" ref="461901006"/>
 					</object>
 				</object>
 			</object>
@@ -538,7 +540,7 @@
 					<string>-2.CustomClassName</string>
 					<string>103.IBPluginDependency</string>
 					<string>104.IBPluginDependency</string>
-					<string>109.IBPluginDependency</string>
+					<string>124.IBPluginDependency</string>
 					<string>63.IBPluginDependency</string>
 					<string>63.IBViewBoundsToFrameTransform</string>
 					<string>69.IBPluginDependency</string>
@@ -597,197 +599,9 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">113</int>
+			<int key="maxID">126</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBPartialClassDescription">
-					<string key="className">DetailViewController</string>
-					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>decreaseTextSizeClicked:</string>
-							<string>increaseTextSizeClicked:</string>
-							<string>nextButtonClicked:</string>
-							<string>nextPageClicked:</string>
-							<string>prevButtonClicked:</string>
-							<string>prevPageClicked:</string>
-							<string>showChapterIndex:</string>
-							<string>slidingEnded:</string>
-							<string>slidingStarted:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>decreaseTextSizeClicked:</string>
-							<string>increaseTextSizeClicked:</string>
-							<string>nextButtonClicked:</string>
-							<string>nextPageClicked:</string>
-							<string>prevButtonClicked:</string>
-							<string>prevPageClicked:</string>
-							<string>showChapterIndex:</string>
-							<string>slidingEnded:</string>
-							<string>slidingStarted:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBActionInfo">
-								<string key="name">decreaseTextSizeClicked:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">increaseTextSizeClicked:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">nextButtonClicked:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">nextPageClicked:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">prevButtonClicked:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">prevPageClicked:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">showChapterIndex:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">slidingEnded:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">slidingStarted:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="outlets">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>chapterListButton</string>
-							<string>currentPageLabel</string>
-							<string>decTextSizeButton</string>
-							<string>incTextSizeButton</string>
-							<string>nextPageButton</string>
-							<string>nextSpineButton</string>
-							<string>pageSlider</string>
-							<string>prevPageButton</string>
-							<string>prevSpineButton</string>
-							<string>toolbar</string>
-							<string>webView</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>UIBarButtonItem</string>
-							<string>UILabel</string>
-							<string>UIBarButtonItem</string>
-							<string>UIBarButtonItem</string>
-							<string>UIBarButtonItem</string>
-							<string>UIBarButtonItem</string>
-							<string>UISlider</string>
-							<string>UIBarButtonItem</string>
-							<string>UIBarButtonItem</string>
-							<string>UIToolbar</string>
-							<string>UIWebView</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>chapterListButton</string>
-							<string>currentPageLabel</string>
-							<string>decTextSizeButton</string>
-							<string>incTextSizeButton</string>
-							<string>nextPageButton</string>
-							<string>nextSpineButton</string>
-							<string>pageSlider</string>
-							<string>prevPageButton</string>
-							<string>prevSpineButton</string>
-							<string>toolbar</string>
-							<string>webView</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBToOneOutletInfo">
-								<string key="name">chapterListButton</string>
-								<string key="candidateClassName">UIBarButtonItem</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">currentPageLabel</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">decTextSizeButton</string>
-								<string key="candidateClassName">UIBarButtonItem</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">incTextSizeButton</string>
-								<string key="candidateClassName">UIBarButtonItem</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">nextPageButton</string>
-								<string key="candidateClassName">UIBarButtonItem</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">nextSpineButton</string>
-								<string key="candidateClassName">UIBarButtonItem</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">pageSlider</string>
-								<string key="candidateClassName">UISlider</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">prevPageButton</string>
-								<string key="candidateClassName">UIBarButtonItem</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">prevSpineButton</string>
-								<string key="candidateClassName">UIBarButtonItem</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">toolbar</string>
-								<string key="candidateClassName">UIToolbar</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">webView</string>
-								<string key="candidateClassName">UIWebView</string>
-							</object>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/DetailViewController.h</string>
-					</object>
-				</object>
-			</object>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
