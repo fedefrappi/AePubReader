@@ -21,14 +21,15 @@
     id <ChapterProtocol> delegate;
     int pageCount;
     int chapterIndex;
-    CGSize windowSize;
+    CGRect windowSize;
     int fontPercentSize;
     NSString* text;
 }
 
 @property (nonatomic, assign) id delegate;
-@property (nonatomic, readonly) int pageCount, chapterIndex;
+@property (nonatomic, readonly) int pageCount, chapterIndex, fontPercentSize;
 @property (nonatomic, readonly) NSString *spinePath, *title, *text;
+@property (nonatomic, readonly) CGRect windowSize;
 
 - (id) initWithPath:(NSString*)theSpinePath title:(NSString*)theTitle chapterIndex:(int) theIndex;
 

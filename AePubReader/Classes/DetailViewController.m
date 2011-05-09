@@ -9,13 +9,15 @@
 #import "DetailViewController.h"
 #import "ChapterListViewController.h"
 #import "SearchResultsViewController.h"
+#import "SearchResult.h"
+#import "SearchWebView.h"
 #import "Chapter.h"
 
 @implementation DetailViewController
 
 @synthesize loadedEpub, toolbar, webView, nextSpineButton, prevSpineButton; 
 @synthesize chapterListButton, prevPageButton, nextPageButton, decTextSizeButton, incTextSizeButton;
-@synthesize currentPageLabel, pageSlider;
+@synthesize currentPageLabel, pageSlider, searching;
 
 #pragma mark -
 
@@ -41,6 +43,7 @@
 		[currentPageLabel setText:[NSString stringWithFormat:@"%d/%d",[self getGlobalPageCount], totalPagesCount]];
 		[pageSlider setValue:(float)100*(float)[self getGlobalPageCount]/(float)totalPagesCount animated:YES];
 		loading = NO;
+		NSLog(@"Pagination Ended!");
 	}
 }
 
@@ -53,10 +56,17 @@
 	return pageCount;
 }
 
-- (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex{
+- (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex {
+	[self loadSpine:spineIndex atPageIndex:pageIndex highlightSearchResult:nil];
+}
+
+- (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex highlightSearchResult:(SearchResult*)theResult{
 	
-//    NSLog(@"%d", [[loadedEpub.spineArray objectAtIndex:spineIndex] pageCount]);
+	currentSearchResult = [theResult retain];
+
 	[chaptersPopover dismissPopoverAnimated:YES];
+	[searchResultsPopover dismissPopoverAnimated:YES];
+	
 	NSURL* url = [NSURL fileURLWithPath:[[loadedEpub.spineArray objectAtIndex:spineIndex] spinePath]];
 	[webView loadRequest:[NSURLRequest requestWithURL:url]];
 	currentPageInSpineIndex = pageIndex;
@@ -164,7 +174,7 @@
 	int pageIndex = 0;
 	for(chapterIndex=0; chapterIndex<[loadedEpub.spineArray count]; chapterIndex++){
 		pageSum+=[[loadedEpub.spineArray objectAtIndex:chapterIndex] pageCount];
-		NSLog(@"Chapter %d, targetPage: %d, pageSum: %d, pageIndex: %d", chapterIndex, targetPage, pageSum, (pageSum-targetPage));
+//		NSLog(@"Chapter %d, targetPage: %d, pageSum: %d, pageIndex: %d", chapterIndex, targetPage, pageSum, (pageSum-targetPage));
 		if(pageSum>=targetPage){
 			pageIndex = [[loadedEpub.spineArray objectAtIndex:chapterIndex] pageCount] - 1 - pageSum + targetPage;
 			break;
@@ -204,6 +214,8 @@
 	NSString *insertRule1 = [NSString stringWithFormat:@"addCSSRule('html', 'padding: 0px; height: %fpx; -webkit-column-gap: 0px; -webkit-column-width: %fpx;')", webView.frame.size.height, webView.frame.size.width];
 	NSString *insertRule2 = [NSString stringWithFormat:@"addCSSRule('p', 'text-align: justify;')"];
 	NSString *setTextSizeRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')", currentTextSize];
+	NSString *setHighlightColorRule = [NSString stringWithFormat:@"addCSSRule('highlight', 'background-color: yellow;')"];
+
 	
 	[webView stringByEvaluatingJavaScriptFromString:varMySheet];
 	
@@ -215,6 +227,13 @@
 	
 	[webView stringByEvaluatingJavaScriptFromString:setTextSizeRule];
 	
+	[webView stringByEvaluatingJavaScriptFromString:setHighlightColorRule];
+	
+	if(currentSearchResult!=nil){
+		NSLog(@"Highlighting %@", currentSearchResult.originatingQuery);
+		NSLog(@"Found %d occurrences", [webView highlightAllOccurencesOfString:currentSearchResult.originatingQuery]);
+	}
+	
 	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];
 	pagesInCurrentSpineCount = (int)((float)totalWidth/webView.bounds.size.width);
 	
@@ -224,6 +243,7 @@
 
 - (void) updatePagination{
 	if(epubLoaded){
+		NSLog(@"Pagination Started!");
 		loading = YES;
 		totalPagesCount=0;
 		[self loadSpine:currentSpineIndex atPageIndex:currentPageInSpineIndex];
@@ -243,7 +263,10 @@
 			[searchResultsPopover presentPopoverFromBarButtonItem:incTextSizeButton permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];		
 	}
 	NSLog(@"Searching for %@", [searchBar text]);
-	[searchResViewController searchString:[searchBar text]];
+	if(!searching){
+		searching = YES;
+		[searchResViewController searchString:[searchBar text]];
+	}
 }
 
 
@@ -252,7 +275,6 @@
 
 // Ensure that the view controller supports rotation and that the split view can therefore show in both portrait and landscape.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    NSLog(@"autorotateeeee");
 	[self updatePagination];
 	return YES;
 }
@@ -289,6 +311,7 @@
 	[pageSlider setMaximumTrackImage:[[UIImage imageNamed:@"yellowSlide.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:0] forState:UIControlStateNormal];
 
 	epubLoaded=NO;
+	searching = NO;
 	searchResViewController = [[SearchResultsViewController alloc] initWithNibName:@"SearchResultsViewController" bundle:[NSBundle mainBundle]];
 	searchResViewController.epubViewController = self;
 }

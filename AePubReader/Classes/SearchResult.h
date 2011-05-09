@@ -11,13 +11,15 @@
 
 @interface SearchResult : NSObject {
     int chapterIndex;
+    int hitIndex;
     int pageIndex;
     NSString* neighboringText;
+    NSString* originatingQuery;
 }
 
-- initWithChapterIndex:(int)theChapterIndex pageIndex:(int)thePageIndex neighboringText:(NSString*)theNeighboringText;
+- initWithChapterIndex:(int)theChapterIndex pageIndex:(int)thePageIndex hitIndex:(int)theHitIndex neighboringText:(NSString*)theNeighboringText originatingQuery:(NSString*)theOriginatingQuery;
 
-@property int chapterIndex, pageIndex;
-@property (nonatomic, retain) NSString* neighboringText;
+@property int chapterIndex, pageIndex, hitIndex;
+@property (nonatomic, retain) NSString *neighboringText, *originatingQuery;
 
 @end

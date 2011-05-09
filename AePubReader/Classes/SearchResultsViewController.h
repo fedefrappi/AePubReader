@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "DetailViewController.h"
 
-@interface SearchResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface SearchResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate> {
     UITableView* resultsTableView;
-    NSArray* results;
+    NSMutableArray* results;
     DetailViewController* epubViewController;
+    
+    int currentChapterIndex;
+    NSString* currentQuery;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
@@ -21,8 +24,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (void) searchString:(NSString*)query;
+- (void) searchString:(NSString *)query inChapterAtIndex:(int)index;
 
-- (int)countString:(NSString *)stringToCount inText:(NSString *)text;
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
+- (void) webViewDidFinishLoad:(UIWebView*)webView;
 
 @property (nonatomic, retain) IBOutlet UITableView* resultsTableView;
 @property (nonatomic, retain) DetailViewController* epubViewController;

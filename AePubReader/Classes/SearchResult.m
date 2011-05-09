@@ -11,13 +11,15 @@
 
 @implementation SearchResult
 
-@synthesize pageIndex, chapterIndex, neighboringText;
+@synthesize pageIndex, chapterIndex, neighboringText, hitIndex, originatingQuery;
 
-- initWithChapterIndex:(int)theChapterIndex pageIndex:(int)thePageIndex neighboringText:(NSString*)theNeighboringText{
+- initWithChapterIndex:(int)theChapterIndex pageIndex:(int)thePageIndex hitIndex:(int)theHitIndex neighboringText:(NSString*)theNeighboringText originatingQuery:(NSString*)theOriginatingQuery{
     if((self=[super init])){
         chapterIndex = theChapterIndex;
         pageIndex = thePageIndex;
-        neighboringText = [theNeighboringText retain];
+        hitIndex = theHitIndex;
+        neighboringText = [[theNeighboringText stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] retain];
+        originatingQuery = [theOriginatingQuery retain];
     }
     return self;
 }

@@ -12,6 +12,7 @@
 #import "Chapter.h"
 
 @class SearchResultsViewController;
+@class SearchResult;
 
 @interface DetailViewController : UIViewController <UIWebViewDelegate, ChapterProtocol, UISearchBarDelegate> {
     
@@ -42,11 +43,13 @@
     
     BOOL epubLoaded;
     BOOL loading;
+    BOOL searching;
     
     UIPopoverController* chaptersPopover;
     UIPopoverController* searchResultsPopover;
 
     SearchResultsViewController* searchResViewController;
+    SearchResult* currentSearchResult;
 }
 
 - (IBAction) showChapterIndex:(id)sender;
@@ -62,6 +65,7 @@
 - (void) gotoPageInCurrentSpine: (int)pageIndex;
 - (void) updatePagination;
 - (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex;
+- (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex highlightSearchResult:(SearchResult*)theResult;
 - (void) webViewDidFinishLoad:(UIWebView *)theWebView;
 - (void) loadEpub:(NSString*) epubName;
 
@@ -91,5 +95,6 @@
 @property (nonatomic, retain) IBOutlet UISlider *pageSlider;
 @property (nonatomic, retain) IBOutlet UILabel *currentPageLabel;
 
+@property BOOL searching;
 
 @end

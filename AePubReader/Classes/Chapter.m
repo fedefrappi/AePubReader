@@ -11,16 +11,13 @@
 
 @implementation Chapter 
 
-@synthesize delegate, chapterIndex, title, pageCount, spinePath, text;
+@synthesize delegate, chapterIndex, title, pageCount, spinePath, text, windowSize, fontPercentSize;
 
 - (id) initWithPath:(NSString*)theSpinePath title:(NSString*)theTitle chapterIndex:(int) theIndex{
     if((self=[super init])){
         spinePath = [theSpinePath retain];
         title = [theTitle retain];
         chapterIndex = theIndex;
-   //     parser = [[URLParser alloc] initWithCallbackDelegate:self];
-   //     [parser performSelector:@selector(gotBodyElement:) forElementsMatching:@"head"];
-   //     [parser parseURL:[NSURL fileURLWithPath:theSpinePath]];
     
         DocumentRoot* doc = [Element parseHTML:[[NSString alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL fileURLWithPath:theSpinePath]] encoding:NSUTF8StringEncoding]];
         text = [[[doc elementWithCSSSelector:[[CSSSelector alloc] initWithString:@"body"]] contentsText] retain];
@@ -34,8 +31,9 @@
 
 - (void) loadChapterWithWindowSize:(CGRect)theWindowSize fontPercentSize:(int) theFontPercentSize{
     fontPercentSize = theFontPercentSize;
-    NSLog(@"webviewSize: %f * %f, fontPercentSize: %d", theWindowSize.size.width, theWindowSize.size.height,theFontPercentSize);
-    UIWebView* webView = [[UIWebView alloc] initWithFrame:theWindowSize];
+    windowSize = theWindowSize;
+//  NSLog(@"webviewSize: %f * %f, fontPercentSize: %d", theWindowSize.size.width, theWindowSize.size.height,theFontPercentSize);
+    UIWebView* webView = [[UIWebView alloc] initWithFrame:windowSize];
     [webView setDelegate:self];
     NSURLRequest* urlRequest = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:spinePath]];
     [webView loadRequest:urlRequest];
@@ -77,7 +75,7 @@
 	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];
 	pageCount = (int)((float)totalWidth/webView.bounds.size.width);
 	
-    NSLog(@"Chapter %d: %@ -> %d pages", chapterIndex, title, pageCount);
+//    NSLog(@"Chapter %d: %@ -> %d pages", chapterIndex, title, pageCount);
     
     [webView dealloc];
     [delegate chapterDidFinishLoad:self];
