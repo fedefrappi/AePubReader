@@ -17,9 +17,10 @@
     NSString* originatingQuery;
 }
 
-- initWithChapterIndex:(int)theChapterIndex pageIndex:(int)thePageIndex hitIndex:(int)theHitIndex neighboringText:(NSString*)theNeighboringText originatingQuery:(NSString*)theOriginatingQuery;
-
 @property int chapterIndex, pageIndex, hitIndex;
 @property (nonatomic, retain) NSString *neighboringText, *originatingQuery;
+
+- initWithChapterIndex:(int)theChapterIndex pageIndex:(int)thePageIndex hitIndex:(int)theHitIndex neighboringText:(NSString*)theNeighboringText originatingQuery:(NSString*)theOriginatingQuery;
+
 
 @end

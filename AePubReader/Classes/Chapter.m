@@ -7,7 +7,7 @@
 //
 
 #import "Chapter.h"
-#import "CSSSelector.h"
+#import "NSString+HTML.h"
 
 @implementation Chapter 
 
@@ -18,15 +18,12 @@
         spinePath = [theSpinePath retain];
         title = [theTitle retain];
         chapterIndex = theIndex;
-    
-        DocumentRoot* doc = [Element parseHTML:[[NSString alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL fileURLWithPath:theSpinePath]] encoding:NSUTF8StringEncoding]];
-        text = [[[doc elementWithCSSSelector:[[CSSSelector alloc] initWithString:@"body"]] contentsText] retain];
+
+		NSString* html = [[NSString alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL fileURLWithPath:theSpinePath]] encoding:NSUTF8StringEncoding];
+		text = [[html stringByConvertingHTMLToPlainText] retain];
+		[html release];
     }
     return self;
-}
-
-- (void) gotBodyElement:(Element*)element{
-//    NSLog(@"%@", [element contentsText]);
 }
 
 - (void) loadChapterWithWindowSize:(CGRect)theWindowSize fontPercentSize:(int) theFontPercentSize{
@@ -41,6 +38,7 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     NSLog(@"%@", error);
+	[webView dealloc];
 }
 
 - (void) webViewDidFinishLoad:(UIWebView*)webView{
@@ -80,6 +78,13 @@
     [webView dealloc];
     [delegate chapterDidFinishLoad:self];
     
+}
+
+- (void)dealloc {
+    [title release];
+	[spinePath release];
+	[text release];
+    [super dealloc];
 }
 
 

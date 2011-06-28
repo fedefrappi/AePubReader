@@ -9,7 +9,7 @@
 #import "AePubReaderAppDelegate.h"
 
 
-#import "DetailViewController.h"
+#import "EPubViewController.h"
 
 
 @implementation AePubReaderAppDelegate
@@ -26,7 +26,7 @@
     
     self.window.rootViewController = self.detailViewController;
     [self.window makeKeyAndVisible];
-    [detailViewController loadEpub:@"vhugo"];
+    [detailViewController loadEpub:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"vhugo" ofType:@"epub"]]];
     
     return YES;
 }

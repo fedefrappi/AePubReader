@@ -7,29 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DetailViewController.h"
+#import "EPubViewController.h"
 
 @interface SearchResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate> {
     UITableView* resultsTableView;
     NSMutableArray* results;
-    DetailViewController* epubViewController;
+    EPubViewController* epubViewController;
     
     int currentChapterIndex;
     NSString* currentQuery;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+@property (nonatomic, retain) IBOutlet UITableView* resultsTableView;
+@property (nonatomic, assign) EPubViewController* epubViewController;
+@property (nonatomic, retain) NSMutableArray* results;
+@property (nonatomic, retain) NSString* currentQuery;
 
 - (void) searchString:(NSString*)query;
-- (void) searchString:(NSString *)query inChapterAtIndex:(int)index;
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
-- (void) webViewDidFinishLoad:(UIWebView*)webView;
-
-@property (nonatomic, retain) IBOutlet UITableView* resultsTableView;
-@property (nonatomic, retain) DetailViewController* epubViewController;
 
 @end

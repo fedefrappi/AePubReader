@@ -8,11 +8,18 @@
 
 #import "SearchResultsViewController.h"
 #import "SearchResult.h"
-#import "SearchWebView.h"
+#import "UIWebView+SearchWebView.h"
+
+@interface SearchResultsViewController()
+
+- (void) searchString:(NSString *)query inChapterAtIndex:(int)index;
+
+@end
+
 
 @implementation SearchResultsViewController
 
-@synthesize resultsTableView, epubViewController;
+@synthesize resultsTableView, epubViewController, currentQuery, results;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"Cell";
@@ -34,24 +41,16 @@
     return [results count];
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     SearchResult* hit = (SearchResult*)[results objectAtIndex:[indexPath row]];
 
-    [epubViewController loadSpine:hit.chapterIndex atPageIndex:hit.pageIndex highlightSearchResult:hit];
-    
+    [epubViewController loadSpine:hit.chapterIndex atPageIndex:hit.pageIndex highlightSearchResult:hit];    
 }
 
 - (void) searchString:(NSString*)query{
-    [query retain];
-    [results release];
-    results = [[NSMutableArray alloc] init];
+    self.results = [[NSMutableArray alloc] init];
     [resultsTableView reloadData];
-    currentQuery=query;
+    self.currentQuery=query;
     
     [self searchString:query inChapterAtIndex:0];    
 }
@@ -87,6 +86,7 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     NSLog(@"%@", error);
+	[webView release];
 }
 
 - (void) webViewDidFinishLoad:(UIWebView*)webView{
@@ -101,7 +101,7 @@
     "}"
 	"}";
 	
-    	NSLog(@"w:%f h:%f", webView.bounds.size.width, webView.bounds.size.height);
+//    NSLog(@"w:%f h:%f", webView.bounds.size.width, webView.bounds.size.height);
 	
 	NSString *insertRule1 = [NSString stringWithFormat:@"addCSSRule('html', 'padding: 0px; height: %fpx; -webkit-column-gap: 0px; -webkit-column-width: %fpx;')", webView.frame.size.height, webView.frame.size.width];
 	NSString *insertRule2 = [NSString stringWithFormat:@"addCSSRule('p', 'text-align: justify;')"];
@@ -122,7 +122,7 @@
     
     NSString* foundHits = [webView stringByEvaluatingJavaScriptFromString:@"results"];
     
-    NSLog(@"%@", foundHits);
+//    NSLog(@"%@", foundHits);
     
     NSMutableArray* objects = [[NSMutableArray alloc] init];
     
@@ -154,13 +154,14 @@
                                             }
     }];
     
-    [objects dealloc];
+    [objects release];
     
     for(int i=0; i<[orderedRes count]; i++){
         NSArray* currObj = [orderedRes objectAtIndex:i];
             
         SearchResult* searchRes = [[SearchResult alloc] initWithChapterIndex:currentChapterIndex pageIndex:([[currObj objectAtIndex:1] intValue]/webView.bounds.size.height) hitIndex:0 neighboringText:[webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"unescape('%@')", [currObj objectAtIndex:2]]] originatingQuery:currentQuery];
-        [results addObject:searchRes];   
+        [results addObject:searchRes];
+		[searchRes release];
     }
     
     [webView dealloc];
@@ -184,6 +185,9 @@
 
 - (void)dealloc
 {
+	self.resultsTableView = nil;
+	[results release];
+	[currentQuery release];
     [super dealloc];
 }
 
@@ -207,7 +211,7 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    self.resultsTableView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

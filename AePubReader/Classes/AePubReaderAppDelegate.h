@@ -9,17 +9,17 @@
 #import <UIKit/UIKit.h>
 
 
-@class DetailViewController;
+@class EPubViewController;
 
 @interface AePubReaderAppDelegate : NSObject <UIApplicationDelegate> {
     
     UIWindow *window;
         
-    DetailViewController *detailViewController;
+    EPubViewController *detailViewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
+@property (nonatomic, retain) IBOutlet EPubViewController *detailViewController;
 
 @end

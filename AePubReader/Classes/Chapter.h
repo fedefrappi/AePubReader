@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "URLParser.h"
 @class Chapter;
 
-@protocol ChapterProtocol <NSObject>
+@protocol ChapterDelegate <NSObject>
 @required
 - (void) chapterDidFinishLoad:(Chapter*)chapter;
 @end
@@ -18,12 +17,12 @@
 @interface Chapter : NSObject <UIWebViewDelegate>{
     NSString* spinePath;
     NSString* title;
-    id <ChapterProtocol> delegate;
+	NSString* text;
+    id <ChapterDelegate> delegate;
     int pageCount;
     int chapterIndex;
     CGRect windowSize;
     int fontPercentSize;
-    NSString* text;
 }
 
 @property (nonatomic, assign) id delegate;
@@ -34,7 +33,5 @@
 - (id) initWithPath:(NSString*)theSpinePath title:(NSString*)theTitle chapterIndex:(int) theIndex;
 
 - (void) loadChapterWithWindowSize:(CGRect)theWindowSize fontPercentSize:(int) theFontPercentSize;
-- (void) webViewDidFinishLoad:(UIWebView*)webView;
-- (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
 
 @end

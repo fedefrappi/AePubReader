@@ -18,10 +18,16 @@
         chapterIndex = theChapterIndex;
         pageIndex = thePageIndex;
         hitIndex = theHitIndex;
-        neighboringText = [[theNeighboringText stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] retain];
-        originatingQuery = [theOriginatingQuery retain];
+        self.neighboringText = [theNeighboringText stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        self.originatingQuery = theOriginatingQuery;
     }
     return self;
+}
+
+- (void)dealloc {
+    [neighboringText release];
+	[originatingQuery release];
+    [super dealloc];
 }
 
 @end

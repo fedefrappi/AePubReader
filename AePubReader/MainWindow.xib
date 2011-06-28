@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">800</int>
-		<string key="IBDocument.SystemVersion">10J869</string>
+		<string key="IBDocument.SystemVersion">10K540</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
-		<string key="IBDocument.AppKitVersion">1038.35</string>
+		<string key="IBDocument.AppKitVersion">1038.36</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -141,7 +141,7 @@
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="3.CustomClassName">AePubReaderAppDelegate</string>
 				<string key="3.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="50.CustomClassName">DetailViewController</string>
+				<string key="50.CustomClassName">EPubViewController</string>
 				<string key="50.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
@@ -156,13 +156,13 @@
 					<string key="className">AePubReaderAppDelegate</string>
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="detailViewController">DetailViewController</string>
+						<string key="detailViewController">EPubViewController</string>
 						<string key="window">UIWindow</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="detailViewController">
 							<string key="name">detailViewController</string>
-							<string key="candidateClassName">DetailViewController</string>
+							<string key="candidateClassName">EPubViewController</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="window">
 							<string key="name">window</string>
@@ -175,15 +175,13 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">DetailViewController</string>
+					<string key="className">EPubViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="decreaseTextSizeClicked:">id</string>
+						<string key="doneClicked:">id</string>
 						<string key="increaseTextSizeClicked:">id</string>
-						<string key="nextButtonClicked:">id</string>
-						<string key="nextPageClicked:">id</string>
-						<string key="prevButtonClicked:">id</string>
-						<string key="prevPageClicked:">id</string>
+						<string key="showChapterIndex:">id</string>
 						<string key="slidingEnded:">id</string>
 						<string key="slidingStarted:">id</string>
 					</dictionary>
@@ -192,24 +190,16 @@
 							<string key="name">decreaseTextSizeClicked:</string>
 							<string key="candidateClassName">id</string>
 						</object>
+						<object class="IBActionInfo" key="doneClicked:">
+							<string key="name">doneClicked:</string>
+							<string key="candidateClassName">id</string>
+						</object>
 						<object class="IBActionInfo" key="increaseTextSizeClicked:">
 							<string key="name">increaseTextSizeClicked:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="nextButtonClicked:">
-							<string key="name">nextButtonClicked:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="nextPageClicked:">
-							<string key="name">nextPageClicked:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="prevButtonClicked:">
-							<string key="name">prevButtonClicked:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="prevPageClicked:">
-							<string key="name">prevPageClicked:</string>
+						<object class="IBActionInfo" key="showChapterIndex:">
+							<string key="name">showChapterIndex:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="slidingEnded:">
@@ -222,18 +212,19 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="chapterListButton">UIBarButtonItem</string>
 						<string key="currentPageLabel">UILabel</string>
 						<string key="decTextSizeButton">UIBarButtonItem</string>
 						<string key="incTextSizeButton">UIBarButtonItem</string>
-						<string key="nextPageButton">UIBarButtonItem</string>
-						<string key="nextSpineButton">UIBarButtonItem</string>
 						<string key="pageSlider">UISlider</string>
-						<string key="prevPageButton">UIBarButtonItem</string>
-						<string key="prevSpineButton">UIBarButtonItem</string>
 						<string key="toolbar">UIToolbar</string>
 						<string key="webView">UIWebView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="chapterListButton">
+							<string key="name">chapterListButton</string>
+							<string key="candidateClassName">UIBarButtonItem</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="currentPageLabel">
 							<string key="name">currentPageLabel</string>
 							<string key="candidateClassName">UILabel</string>
@@ -246,25 +237,9 @@
 							<string key="name">incTextSizeButton</string>
 							<string key="candidateClassName">UIBarButtonItem</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="nextPageButton">
-							<string key="name">nextPageButton</string>
-							<string key="candidateClassName">UIBarButtonItem</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="nextSpineButton">
-							<string key="name">nextSpineButton</string>
-							<string key="candidateClassName">UIBarButtonItem</string>
-						</object>
 						<object class="IBToOneOutletInfo" key="pageSlider">
 							<string key="name">pageSlider</string>
 							<string key="candidateClassName">UISlider</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="prevPageButton">
-							<string key="name">prevPageButton</string>
-							<string key="candidateClassName">UIBarButtonItem</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="prevSpineButton">
-							<string key="name">prevSpineButton</string>
-							<string key="candidateClassName">UIBarButtonItem</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="toolbar">
 							<string key="name">toolbar</string>
@@ -277,7 +252,7 @@
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/DetailViewController.h</string>
+						<string key="minorKey">./Classes/EPubViewController.h</string>
 					</object>
 				</object>
 			</array>
