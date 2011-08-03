@@ -112,6 +112,11 @@
             ncxFileName = [[element attributeForName:@"href"] stringValue];
 //          NSLog(@"%@ : %@", [[element attributeForName:@"id"] stringValue], [[element attributeForName:@"href"] stringValue]);
         }
+        
+        if([[[element attributeForName:@"media-type"] stringValue] isEqualToString:@"application/xhtml+xml"]){
+            ncxFileName = [[element attributeForName:@"href"] stringValue];
+//          NSLog(@"%@ : %@", [[element attributeForName:@"id"] stringValue], [[element attributeForName:@"href"] stringValue]);
+        }
 	}
 	
     int lastSlash = [opfPath rangeOfString:@"/" options:NSBackwardsSearch].location;
