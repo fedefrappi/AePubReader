@@ -26,7 +26,7 @@
 
 - (id) initWithEPubPath:(NSString *)path{
 	if((self=[super init])){
-		epubFilePath = path;
+		epubFilePath = [path retain];
 		spineArray = [[NSMutableArray alloc] init];
 		[self parseEpub];
 	}
