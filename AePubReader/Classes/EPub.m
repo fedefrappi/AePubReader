@@ -26,7 +26,7 @@
 
 - (id) initWithEPubPath:(NSString *)path{
 	if((self=[super init])){
-		epubFilePath = path;
+		epubFilePath = [path retain];
 		spineArray = [[NSMutableArray alloc] init];
 		[self parseEpub];
 	}
@@ -109,6 +109,11 @@
 	for (CXMLElement* element in itemsArray) {
 		[itemDictionary setValue:[[element attributeForName:@"href"] stringValue] forKey:[[element attributeForName:@"id"] stringValue]];
         if([[[element attributeForName:@"media-type"] stringValue] isEqualToString:@"application/x-dtbncx+xml"]){
+            ncxFileName = [[element attributeForName:@"href"] stringValue];
+//          NSLog(@"%@ : %@", [[element attributeForName:@"id"] stringValue], [[element attributeForName:@"href"] stringValue]);
+        }
+        
+        if([[[element attributeForName:@"media-type"] stringValue] isEqualToString:@"application/xhtml+xml"]){
             ncxFileName = [[element attributeForName:@"href"] stringValue];
 //          NSLog(@"%@ : %@", [[element attributeForName:@"id"] stringValue], [[element attributeForName:@"href"] stringValue]);
         }
